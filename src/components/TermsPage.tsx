@@ -1,10 +1,6 @@
 import { Footer } from "./Footer";
 
-interface TermsPageProps {
-    onNavigate?: (page: string) => void;
-}
-
-export function TermsPage({ onNavigate }: TermsPageProps) {
+export function TermsPage() {
     return (
         <>
             <main className="w-full bg-[#ece6e8] px-6 py-16 md:py-24 md:px-12 lg:px-20">
@@ -47,7 +43,8 @@ export function TermsPage({ onNavigate }: TermsPageProps) {
                     </div>
                 </div>
             </main>
-            <Footer onNavigate={onNavigate} />
+            <Footer />
         </>
     );
 }
+

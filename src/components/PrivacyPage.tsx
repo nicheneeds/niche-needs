@@ -1,10 +1,6 @@
 import { Footer } from "./Footer";
 
-interface PrivacyPageProps {
-    onNavigate?: (page: string) => void;
-}
-
-export function PrivacyPage({ onNavigate }: PrivacyPageProps) {
+export function PrivacyPage() {
     return (
         <>
             <main className="w-full bg-[#ece6e8] px-6 py-16 md:py-24 md:px-12 lg:px-20">
@@ -43,7 +39,8 @@ export function PrivacyPage({ onNavigate }: PrivacyPageProps) {
                     </div>
                 </div>
             </main>
-            <Footer onNavigate={onNavigate} />
+            <Footer />
         </>
     );
 }
+

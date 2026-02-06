@@ -1,10 +1,7 @@
 import { Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
-interface FooterProps {
-  onNavigate?: (page: string) => void;
-}
-
-export function Footer({ onNavigate }: FooterProps) {
+export function Footer() {
   return (
     <footer
       id="footer"
@@ -95,24 +92,24 @@ export function Footer({ onNavigate }: FooterProps) {
             <Instagram className="w-4 h-4" strokeWidth={1.75} />
             Instagram
           </a>
-          <button
-            onClick={() => onNavigate?.('terms')}
+          <Link
+            to="/terms"
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer"
           >
             Terms & Conditions
-          </button>
-          <button
-            onClick={() => onNavigate?.('refunds')}
+          </Link>
+          <Link
+            to="/refunds"
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer"
           >
             Refund Policy
-          </button>
-          <button
-            onClick={() => onNavigate?.('privacy')}
+          </Link>
+          <Link
+            to="/privacy"
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer"
           >
             Privacy Policy
-          </button>
+          </Link>
         </div>
       </div>
     </footer>
