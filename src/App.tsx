@@ -4,6 +4,7 @@ import { HomePage } from "./components/HomePage";
 import { AssistantsPage } from "./components/AssistantsPage";
 import { TermsPage } from "./components/TermsPage";
 import { RefundsPage } from "./components/RefundsPage";
+import { PrivacyPage } from "./components/PrivacyPage";
 // import { ConsultationWidget } from "./components/ConsultationWidget";
 import { SEO } from "./components/SEO";
 
@@ -25,10 +26,13 @@ export default function App() {
         return <TermsPage onNavigate={setCurrentPage} />;
       case 'refunds':
         return <RefundsPage onNavigate={setCurrentPage} />;
+      case 'privacy':
+        return <PrivacyPage onNavigate={setCurrentPage} />;
       default:
         return <HomePage onNavigate={setCurrentPage} />;
     }
   };
+
 
 
   return (

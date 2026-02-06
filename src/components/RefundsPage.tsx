@@ -14,29 +14,21 @@ export function RefundsPage({ onNavigate }: RefundsPageProps) {
                     </h1>
 
                     <div className="font-['Plus_Jakarta_Sans',sans-serif] text-[#1e1e1e] space-y-8 text-base md:text-lg leading-relaxed">
+                        <p className="font-bold">Last Updated: February 6, 2026</p>
+
                         <section>
-                            <h2 className="text-xl font-semibold mb-4 text-black">Our Policy</h2>
-                            <p>At NicheNeeds, we strive for excellence in every project. Due to the customized nature of our AI design and automation services, we have a clear policy regarding refunds.</p>
+                            <h2 className="text-xl mb-4 text-black">1. <span className="font-bold">No Refund Policy</span></h2>
+                            <p>Due to the digital nature of our products (software, licenses, and digital assets), all sales are final. Once a download has started, a license key has been revealed, or a product has been accessed, we do not offer refunds.</p>
                         </section>
 
                         <section>
-                            <h2 className="text-xl font-semibold mb-4 text-black">1. Service Refunds</h2>
-                            <p>Once work has commenced on a project, payments made are generally non-refundable. This is because our services involve significant time and resources dedicated to your specific needs.</p>
+                            <h2 className="text-xl mb-4 text-black">2. <span className="font-bold">Technical Issues</span></h2>
+                            <p>We want our tools to work for you. If you encounter a technical defect that prevents the product from functioning as described, please contact us. If we are unable to resolve the issue within 10 business days, a refund may be issued at our discretion via Lemon Squeezy.</p>
                         </section>
 
                         <section>
-                            <h2 className="text-xl font-semibold mb-4 text-black">2. Cancellation</h2>
-                            <p>If you wish to cancel a project before work has started, you may be eligible for a partial or full refund, minus any administrative fees.</p>
-                        </section>
-
-                        <section>
-                            <h2 className="text-xl font-semibold mb-4 text-black">3. Satisfaction Guarantee</h2>
-                            <p>We work closely with our clients to ensure satisfaction. If you are unhappy with the progress, please contact us immediately so we can address your concerns and make necessary adjustments.</p>
-                        </section>
-
-                        <section>
-                            <h2 className="text-xl font-semibold mb-4 text-black">4. Contact Us</h2>
-                            <p>If you have any questions about our refund policy, please reach out to us at hello@nicheneeds.com.</p>
+                            <h2 className="text-xl mb-4 text-black">3. <span className="font-bold">Requesting a Refund</span></h2>
+                            <p>Since Lemon Squeezy is the Merchant of Record, you may initiate a support request through your original receipt or by contacting us at <strong>studionicheneeds@gmail.com</strong>.</p>
                         </section>
                     </div>
                 </div>

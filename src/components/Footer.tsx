@@ -107,14 +107,12 @@ export function Footer({ onNavigate }: FooterProps) {
           >
             Refund Policy
           </button>
-          <a
-            href="https://niche-needs.notion.site/Privacy-Policy-2dcbf22fe25680838282c35a261f1506?source=copy_link"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => onNavigate?.('privacy')}
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer"
           >
             Privacy Policy
-          </a>
+          </button>
         </div>
       </div>
     </footer>
