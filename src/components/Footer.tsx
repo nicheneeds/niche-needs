@@ -1,6 +1,10 @@
 import { Instagram } from "lucide-react";
 
-export function Footer() {
+interface FooterProps {
+  onNavigate?: (page: string) => void;
+}
+
+export function Footer({ onNavigate }: FooterProps) {
   return (
     <footer
       id="footer"
@@ -91,14 +95,18 @@ export function Footer() {
             <Instagram className="w-4 h-4" strokeWidth={1.75} />
             Instagram
           </a>
-          <a
-            href="https://niche-needs.notion.site/Terms-Conditions-2dcbf22fe2568052ad13d14fd04c275c?source=copy_link"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => onNavigate?.('terms')}
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer"
           >
             Terms & Conditions
-          </a>
+          </button>
+          <button
+            onClick={() => onNavigate?.('refunds')}
+            className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer"
+          >
+            Refund Policy
+          </button>
           <a
             href="https://niche-needs.notion.site/Privacy-Policy-2dcbf22fe25680838282c35a261f1506?source=copy_link"
             target="_blank"

@@ -7,7 +7,11 @@ import { About } from "./About";
 // import { FAQ } from "./FAQ";
 import { Footer } from "./Footer";
 
-export function HomePage() {
+interface HomePageProps {
+  onNavigate?: (page: string) => void;
+}
+
+export function HomePage({ onNavigate }: HomePageProps) {
   return (
     <>
       <main>
@@ -19,7 +23,7 @@ export function HomePage() {
         {/* <Pricing /> */}
         {/* <FAQ /> */}
       </main>
-      <Footer />
+      <Footer onNavigate={onNavigate} />
     </>
   );
 }

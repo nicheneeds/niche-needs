@@ -1,47 +1,41 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Header } from "./components/Header";
 import { HomePage } from "./components/HomePage";
 import { AssistantsPage } from "./components/AssistantsPage";
+import { TermsPage } from "./components/TermsPage";
+import { RefundsPage } from "./components/RefundsPage";
 // import { ConsultationWidget } from "./components/ConsultationWidget";
 import { SEO } from "./components/SEO";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<string>('home');
 
-
-  /* 
+  // Scroll to top when page changes
   useEffect(() => {
-    // Load ElevenLabs ConvAI widget script
-    const script = document.createElement('script');
-    script.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
-    script.async = true;
-    script.type = 'text/javascript';
-    
-    script.onload = () => {
-      const convaiElement = document.createElement('elevenlabs-convai');
-      convaiElement.setAttribute('agent-id', 'agent_4501kc0pqq3cfc6stpp02smdz6rc');
-      document.body.appendChild(convaiElement);
-    };
+    window.scrollTo(0, 0);
+  }, [currentPage]);
 
-    document.body.appendChild(script);
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'home':
+        return <HomePage onNavigate={setCurrentPage} />;
+      case 'assistants':
+        return <AssistantsPage />;
+      case 'terms':
+        return <TermsPage onNavigate={setCurrentPage} />;
+      case 'refunds':
+        return <RefundsPage onNavigate={setCurrentPage} />;
+      default:
+        return <HomePage onNavigate={setCurrentPage} />;
+    }
+  };
 
-    return () => {
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
-      }
-      const convaiElement = document.querySelector('elevenlabs-convai');
-      if (convaiElement && convaiElement.parentNode) {
-        convaiElement.parentNode.removeChild(convaiElement);
-      }
-    };
-  }, []);
-  */
 
   return (
     <div className="min-h-screen bg-[#ece6e8]">
       <SEO />
       <Header onNavigate={setCurrentPage} />
-      {currentPage === 'home' ? <HomePage /> : <AssistantsPage />}
+      {renderPage()}
       {/* <ConsultationWidget /> */}
     </div>
   );
