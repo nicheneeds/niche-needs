@@ -10,7 +10,7 @@ export function TermsPage() {
                     </h1>
 
                     <div className="font-['Plus_Jakarta_Sans',sans-serif] text-[#1e1e1e] space-y-8 text-base md:text-lg leading-relaxed">
-                        <p className="font-bold">Last Updated: February 6, 2026</p>
+                        <p className="font-bold">Last Updated: February 5, 2026</p>
 
                         <section>
                             <h2 className="text-xl mb-4 text-black">1. <span className="font-bold">Overview</span></h2>

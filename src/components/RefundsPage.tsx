@@ -10,7 +10,7 @@ export function RefundsPage() {
                     </h1>
 
                     <div className="font-['Plus_Jakarta_Sans',sans-serif] text-[#1e1e1e] space-y-8 text-base md:text-lg leading-relaxed">
-                        <p className="font-bold">Last Updated: February 6, 2026</p>
+                        <p className="font-bold">Last Updated: February 5, 2026</p>
 
                         <p>
                             At <span className="font-bold">NicheNeeds</span>, we operate as an AI Product Studio with a "build, ship, and iterate" mindset. We want our builders and users to be satisfied with the tools and games we create.
