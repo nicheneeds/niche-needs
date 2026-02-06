@@ -16,19 +16,56 @@ export function RefundsPage({ onNavigate }: RefundsPageProps) {
                     <div className="font-['Plus_Jakarta_Sans',sans-serif] text-[#1e1e1e] space-y-8 text-base md:text-lg leading-relaxed">
                         <p className="font-bold">Last Updated: February 6, 2026</p>
 
+                        <p>
+                            At <span className="font-bold">NicheNeeds</span>, we operate as an AI Product Studio with a "build, ship, and iterate" mindset. We want our builders and users to be satisfied with the tools and games we create.
+                        </p>
+
                         <section>
-                            <h2 className="text-xl mb-4 text-black">1. <span className="font-bold">No Refund Policy</span></h2>
-                            <p>Due to the digital nature of our products (software, licenses, and digital assets), all sales are final. Once a download has started, a license key has been revealed, or a product has been accessed, we do not offer refunds.</p>
+                            <h2 className="text-xl mb-4 text-black font-bold">1. Digital Products & Software</h2>
+                            <p>
+                                Due to the nature of digital products (software licenses, digital assets, and game access), all sales are generally final. Once a digital product has been accessed, downloaded, or a license key has been issued, we do not offer standard refunds. This policy is in place to protect the intellectual property of our agentic AI builds.
+                            </p>
                         </section>
 
                         <section>
-                            <h2 className="text-xl mb-4 text-black">2. <span className="font-bold">Technical Issues</span></h2>
-                            <p>We want our tools to work for you. If you encounter a technical defect that prevents the product from functioning as described, please contact us. If we are unable to resolve the issue within 10 business days, a refund may be issued at our discretion via Lemon Squeezy.</p>
+                            <h2 className="text-xl mb-4 text-black font-bold">2. Iterative Development & Sprints</h2>
+                            <p className="mb-4">
+                                NicheNeeds often releases products in rapid development cycles. We believe in transparency and accountability:
+                            </p>
+                            <ul className="space-y-4">
+                                <li>
+                                    <span className="font-bold">Discretionary Refunds</span>: If a specific development sprint or product milestone does not meet the outlined objectives or quality standards we promised, we reserve the right to issue proactive or requested refunds to affected customers.
+                                </li>
+                                <li>
+                                    <span className="font-bold">Technical Failure</span>: If a product is technically non-functional and our support team cannot provide a fix within 10 business days, we will honor a refund request.
+                                </li>
+                            </ul>
                         </section>
 
                         <section>
-                            <h2 className="text-xl mb-4 text-black">3. <span className="font-bold">Requesting a Refund</span></h2>
-                            <p>Since Lemon Squeezy is the Merchant of Record, you may initiate a support request through your original receipt or by contacting us at <strong>studionicheneeds@gmail.com</strong>.</p>
+                            <h2 className="text-xl mb-4 text-black font-bold">3. Merchant of Record</h2>
+                            <p>
+                                Please note that Lemon Squeezy is the Merchant of Record for all NicheNeeds transactions. While we authorize the refunds, the technical processing of the return to your original payment method is handled by the Lemon Squeezy platform.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 className="text-xl mb-4 text-black font-bold">4. How to Request a Refund</h2>
+                            <p className="mb-4">If you believe your situation warrants an exception to our standard policy:</p>
+                            <ul className="list-disc pl-6 space-y-2">
+                                <li>Contact us via our support channel or email <strong>studionicheneeds@gmail.com</strong>.</li>
+                                <li>Provide your Order Number and the reason for the request.</li>
+                            </ul>
+                            <p className="mt-4">
+                                We will review your request within 3-5 business days and, if approved, coordinate the refund through Lemon Squeezy.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 className="text-xl mb-4 text-black font-bold">5. Chargebacks</h2>
+                            <p>
+                                We encourage all users to contact us directly to resolve any issues. Unauthorized chargebacks will result in the immediate and permanent revocation of all software licenses and access to NicheNeeds products.
+                            </p>
                         </section>
                     </div>
                 </div>
