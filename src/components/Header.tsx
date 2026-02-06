@@ -1,0 +1,41 @@
+interface HeaderProps {
+  onNavigate?: (page: string) => void;
+}
+
+export function Header({ onNavigate }: HeaderProps) {
+  return (
+    <header className="w-full bg-[#ece6e8] px-6 py-8 md:px-12 lg:px-20">
+      <div className="max-w-[1200px] mx-auto flex items-center justify-between">
+        {/* Logo */}
+        <button onClick={() => onNavigate?.('home')} className="flex items-center gap-2 hover:opacity-70 transition-opacity cursor-pointer">
+          <div className="flex">
+            <div className="w-5 h-5">
+              <svg className="w-full h-full" fill="none" viewBox="0 0 22 12">
+                <path d="M20.3229 9.88135C18.9334 -1.15029 2.92562 -1.1587 1.60459 9.88135" stroke="black" strokeLinecap="round" strokeWidth="3.20886" />
+              </svg>
+            </div>
+            <div className="w-5 h-5 ml-1">
+              <svg className="w-full h-full" fill="none" viewBox="0 0 22 12">
+                <path d="M20.3229 9.88135C18.9334 -1.15029 2.92562 -1.1587 1.60459 9.88135" stroke="black" strokeLinecap="round" strokeWidth="3.20886" />
+              </svg>
+            </div>
+          </div>
+          <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm md:text-base tracking-[0.3px]">NicheNeeds</h1>
+        </button>
+
+        {/* Navigation */}
+        <nav className="hidden md:flex items-center gap-2">
+          {/* <button 
+            onClick={() => onNavigate?.('assistants')}
+            className="px-4 py-2 rounded-full hover:bg-black/5 transition-colors cursor-pointer"
+          >
+            <span className="font-['Plus_Jakarta_Sans',sans-serif] text-[#1e1e1e] text-sm font-[Plus_Jakarta_Sans]">Assistant Showcase</span>
+          </button> 
+          <button className="bg-[#2c2c2c] text-neutral-100 px-6 py-3 rounded-full border border-[#2c2c2c] hover:bg-[#1e1e1e] transition-colors cursor-pointer">
+            <span className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm whitespace-nowrap">Book Your Free Efficiency Audit</span>
+          </button> */}
+        </nav>
+      </div>
+    </header>
+  );
+}
