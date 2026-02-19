@@ -1,4 +1,3 @@
-import { Hero } from "./Hero";
 import { AssistantsShowcase } from "./AssistantsShowcase";
 // import { Features } from "./Features";
 // import { ProductShowcase } from "./ProductShowcase";
@@ -12,12 +11,12 @@ export function HomePage() {
     return (
         <>
             <main>
-                <Hero />
+                <About />
                 <AssistantsShowcase />
                 {/* <Features /> */}
                 {/* <ProductShowcase /> */}
                 {/* <UseCases /> */}
-                {/* <About /> */}
+                {/* <About already used above /> */}
                 {/* <Pricing /> */}
                 {/* <FAQ /> */}
             </main>

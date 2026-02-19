@@ -1,6 +1,6 @@
 import image_8f6be7b68e68a2609748da5c52b620473c945cda from '../assets/8f6be7b68e68a2609748da5c52b620473c945cda.png';
 
-export function Hero() {
+export function About() {
     return (
         <section className="w-full px-6 py-6 md:py-20 md:px-12 lg:px-20" aria-label="Hero section">
             <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center">
