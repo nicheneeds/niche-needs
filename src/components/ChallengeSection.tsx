@@ -78,6 +78,7 @@ export function ChallengeSection() {
             `}} />
             <div className="max-w-[1000px] mx-auto">
                 {/* Scrollable Container */}
+                <div className="mb-4"><h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-white    text-sm">15-Week MVP Challenge Progress</h2></div>
                 <div
                     ref={scrollRef}
                     className="overflow-x-auto hide-scrollbar py-5 -my-4 touch-pan-x"

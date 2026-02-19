@@ -19,7 +19,7 @@ export function Header() {
               </svg>
             </div>
           </div>
-          <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm md:text-base tracking-[0.3px] text-white">NicheNeeds: 15-Week MVP Challenge</h1>
+          <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm md:text-base tracking-[0.3px] text-white">NicheNeeds</h1>
         </Link>
 
         {/* Navigation */}
@@ -31,7 +31,7 @@ export function Header() {
             rel="noopener noreferrer"
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#fff] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer flex items-center gap-2"
           >
-            <Bell className="w-4 h-4" strokeWidth={2} />
+            <Bell className="w-4 h-4" strokeWidth={3} />
           </a>
           {/* <Link
             to="/assistants"
