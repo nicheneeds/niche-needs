@@ -1,4 +1,5 @@
-import { Play, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import videoAsset from "../assets/game.mp4";
 
 export function ActiveWeek() {
     return (
@@ -6,7 +7,7 @@ export function ActiveWeek() {
             <div className="max-w-[1000px] mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Content */}
-                    <div className="flex flex-col gap-6 order-1 lg:order-2">
+                    <div className="flex flex-col gap-6">
                         <div className="space-y-2">
                             <p className="font-['Plus_Jakarta_Sans',sans-serif] text-white/50 text-sm md:text-base font-medium">
                                 {/* Week 2 of 15 Is Live! <span className="text-white"> Magic Edit</span> */}
@@ -34,29 +35,24 @@ export function ActiveWeek() {
                         </div>
                     </div>
 
-                    {/* Video Player Mockup */}
-                    <div className="relative group order-1 lg:order-2">
-                        <div className="bg-[#1a1a1a] rounded-[2rem] aspect-video w-full shadow-2xl overflow-hidden relative border border-white/5">
+                    {/* Video Player Section */}
+                    <div className="relative group">
+                        <div className="bg-[#1a1a1a] rounded-[2rem] w-full shadow-2xl overflow-hidden relative border border-white/5">
                             {/* Window Controls */}
-                            <div className="absolute top-6 left-6 flex gap-1.5">
+                            <div className="absolute top-6 left-6 flex gap-1.5 z-10">
                                 <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
                                 <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
                                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
                             </div>
 
-                            {/* Play Button */}
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
-                                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                                        <Play className="w-5 h-5 text-black fill-current ml-0.5" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Pink Progress Bar */}
-                            <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-black/40">
-                                <div className="h-full bg-[#ff3385] w-[40%]" />
-                            </div>
+                            <video
+                                src={videoAsset}
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="w-full h-auto block"
+                            />
                         </div>
 
                         {/* Shadow/Glow effect */}
