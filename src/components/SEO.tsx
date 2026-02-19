@@ -9,13 +9,13 @@ interface SEOProps {
 }
 
 export function SEO({
-  title = "NicheNeeds - AI Creative Studio for Amsterdam Local Businesses",
-  description = "Voice AI assistants that handle calls naturally for Amsterdam local businesses. Boost productivity with workflow automation and AI consultation. Trusted by 5+ local businesses.",
+  title = "NicheNeeds - Amsterdam AI Creative Lab",
+  description = "Launched in 2025, NicheNeeds is a creative lab blending 15+ years of product design experience with the speed of agentic AI.",
   image,
   url,
   type = 'website'
 }: SEOProps) {
-  
+
   useEffect(() => {
     // Skip in non-browser environments
     if (typeof window === 'undefined' || typeof document === 'undefined') {
@@ -125,7 +125,7 @@ export function SEO({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "NicheNeeds",
-        "description": "AI Creative Studio for Amsterdam local businesses specializing in voice AI assistants and workflow automation",
+        "description": "Launched in 2025, NicheNeeds is a creative lab blending 15+ years of product design experience with the speed of agentic AI.",
         "url": "https://www.nicheneeds.com",
         "logo": faviconUrl,
         "image": absoluteImageUrl,

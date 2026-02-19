@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 // import { Bell } from "lucide-react";
-import { BellDot } from "lucide-react";
+// import { BellDot } from "lucide-react";
 
 export function Header() {
   const isDarkMode = false; // Toggle this to false for light mode
@@ -33,7 +33,7 @@ export function Header() {
             </div>
           </div>
           <h1 className={`font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm md:text-base tracking-[0.3px] ${isDarkMode ? "text-white" : "text-[#2e2e2e]"}`}>
-            NicheNeeds
+            NicheNeeds: 15-Week MVP Challenge
           </h1>
         </Link>
 
@@ -47,10 +47,10 @@ export function Header() {
           >
 
             {/* <Bell className="w-4 h-4" strokeWidth={3.20886} /> */}
-            <BellDot
+            {/* <BellDot
               className="[&>circle]:fill-red-500 [&>circle]:stroke-red-500" strokeWidth={3.20886}
-              size={20}
-            />
+              size={16}
+            /> */}
           </a>
         </nav>
       </div>
