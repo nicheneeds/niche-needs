@@ -15,7 +15,7 @@ export function ActiveWeek() {
     }, []);
 
     return (
-        <section className="w-full bg-[#faf9fc] pt-0 pb-10 px-6 md:px-12 lg:px-20 lg:pt-5 lg:pb-10 overflow-hidden">
+        <section className="w-full bg-[#faf9fc] pt-0 pb-10 px-6 md:px-12 lg:px-20 lg:pt-0 lg:pb-10 overflow-hidden">
             <div className="max-w-[1000px] mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Content */}

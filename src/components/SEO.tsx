@@ -31,25 +31,7 @@ export function SEO({
     // Set page title
     document.title = title;
 
-    // Set favicon
-    const setFavicon = () => {
-      // Remove existing favicons
-      const existingFavicons = document.querySelectorAll('link[rel*="icon"]');
-      existingFavicons.forEach(link => link.remove());
-
-      // Add new favicon
-      const favicon = document.createElement('link');
-      favicon.rel = 'icon';
-      favicon.type = 'image/png';
-      favicon.href = faviconUrl;
-      document.head.appendChild(favicon);
-
-      // Add apple touch icon
-      const appleTouchIcon = document.createElement('link');
-      appleTouchIcon.rel = 'apple-touch-icon';
-      appleTouchIcon.href = faviconUrl;
-      document.head.appendChild(appleTouchIcon);
-    };
+    // Favicon is now handled statically in index.html for Safari compatibility
 
     // Set meta description
     const setMetaDescription = () => {
@@ -170,7 +152,6 @@ export function SEO({
     };
 
     // Execute all SEO improvements
-    setFavicon();
     setMetaDescription();
     setCanonical();
     setOpenGraphTags();
