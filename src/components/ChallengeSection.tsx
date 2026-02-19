@@ -71,6 +71,11 @@ export function ChallengeSection() {
 
     return (
         <section className="w-full bg-[#000] py-4 pt-0 pl-6 pr-0 md:px-12 lg:px-20 select-none">
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                .hide-scrollbar::-webkit-scrollbar { display: none !important; }
+                .hide-scrollbar { -ms-overflow-style: none !important; scrollbar-width: none !important; }
+            `}} />
             <div className="max-w-[1200px] mx-auto">
                 {/* Scrollable Container */}
                 <div
