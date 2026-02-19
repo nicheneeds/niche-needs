@@ -25,7 +25,7 @@ export function ActiveWeek() {
                                 Week 1 Is <span className="text-[red]">Live</span>
                             </p> */}
                             <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-4xl md:text-5xl lg:text-5xl text-[#2e2e2e] leading-[1.1]">
-                                One Click Editing For <span className="font-['Playfair_Display',sans-serif] italic">Busy</span> Professionals.
+                                One Click Editing For <span className="font-['Playfair_Display',sans-serif] italic">Busy</span> Professionals
                             </h2>
                         </div>
 
@@ -34,13 +34,17 @@ export function ActiveWeek() {
                         </p>
 
                         <div className="space-y-4">
-                            <button className="bg-[#ff3385] hover:bg-[#ff1f7a] text-white font-['Plus_Jakarta_Sans',sans-serif] font-bold py-4 px-10 rounded-full transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-pink-500/20 flex items-center justify-center gap-2 text-lg w-fit">
-                                Try It For Free
-                                <ArrowRight className="w-5 h-5" />
-                            </button>
+                            <a
+                                href="https://buy.stripe.com/fZuaEY3sV8gv9A83To2kw02"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-[#ff3385] hover:bg-[#ff1f7a] text-white font-['Plus_Jakarta_Sans',sans-serif] font-bold py-4 px-10 rounded-full transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-pink-500/20 flex items-center justify-center gap-2 text-lg w-fit cursor-pointer"
+                            >
+                                Secure Your Beta Spot (€9)
+                            </a>
 
                             <p className="font-['Plus_Jakarta_Sans',sans-serif] text-gray-400 text-sm tracking-wide">
-                                10 spots for Beta. Refunded if the goal is hit by Friday.
+                                Limited to 10 testers
                             </p>
                         </div>
                     </div>

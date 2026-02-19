@@ -92,7 +92,7 @@ export function ChallengeSection() {
                                     w-24 h-24 md:w-28 md:h-28 rounded-full border transition-all duration-300
                                     ${week.active
                                         ? "bg-[#faf9fc] border-white  z-10 "
-                                        : "bg-white/5 border-white/10 text-white/50"
+                                        : "bg-gray-200/25 border-white/10 text-white/50"
                                     }
                                 `}
                             >
