@@ -7,7 +7,7 @@ export function Footer() {
       id="footer"
       className="w-full bg-black px-6 py-16 md:py-20 md:px-12 lg:px-20 -mt-px"
     >
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1000px] mx-auto">
         {/* Vertical Layout */}
         <div className="mb-16">
           {/* Logo */}

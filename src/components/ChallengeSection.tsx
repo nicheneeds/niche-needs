@@ -76,7 +76,7 @@ export function ChallengeSection() {
                 .hide-scrollbar::-webkit-scrollbar { display: none !important; }
                 .hide-scrollbar { -ms-overflow-style: none !important; scrollbar-width: none !important; }
             `}} />
-            <div className="max-w-[1200px] mx-auto">
+            <div className="max-w-[1000px] mx-auto">
                 {/* Scrollable Container */}
                 <div
                     ref={scrollRef}
@@ -90,7 +90,7 @@ export function ChallengeSection() {
                                     relative flex flex-col items-center justify-center
                                     w-24 h-24 md:w-28 md:h-28 rounded-full border transition-all duration-300
                                     ${week.active
-                                        ? "bg-white border-white  z-10 "
+                                        ? "bg-[#faf9fc] border-white  z-10 "
                                         : "bg-white/5 border-white/10 text-white/50"
                                     }
                                 `}

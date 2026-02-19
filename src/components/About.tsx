@@ -3,10 +3,10 @@ import image_8f6be7b68e68a2609748da5c52b620473c945cda from '../assets/8f6be7b68e
 export function About() {
     return (
         <section className="w-full px-6 py-6 md:py-20 md:px-12 lg:px-20" aria-label="Hero section">
-            <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center">
+            <div className="max-w-[1000px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center">
                 {/* Left Column - Content */}
                 <div className="flex flex-col gap-6 lg:gap-6">
-                    <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-3xl md:text-4xl lg:text-5xl leading-tight text-[#2c2c2c]">
+                    <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-3xl md:text-4xl lg:text-5xl leading-[1.1] text-[#2c2c2c]">
                         NicheNeeds is building {" "}
                         <span className="font-['Playfair_Display',sans-serif] italic font-normal">
                             magic

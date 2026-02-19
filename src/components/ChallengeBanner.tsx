@@ -21,7 +21,7 @@ export function ChallengeBanner() {
         <div className="bg-[#2e2e2e] py-4 border-b border-white/5">
             <div className="w-full max-w-7xl mx-auto px-4 md:px-8">
                 {/* Scrollable Container */}
-                <div className="overflow-x-auto hide-scrollbar py-5 -my-4 px-4">
+                <div className="overflow-x-hidden hide-scrollbar py-5 -my-4 px-4">
                     <div className="flex gap-3 min-w-max items-center">
                         {weeks.map((week) => (
                             <div
