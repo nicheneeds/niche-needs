@@ -38,7 +38,7 @@ export function ActiveWeek() {
                                 href="https://buy.stripe.com/fZuaEY3sV8gv9A83To2kw02"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-[#ff3385] hover:bg-[#ff1f7a] text-white font-['Plus_Jakarta_Sans',sans-serif] font-bold py-4 px-10 rounded-full transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-pink-500/20 flex items-center justify-center gap-2 text-lg w-fit cursor-pointer"
+                                className="bg-[#ff3385] hover:bg-[#ff1f7a] text-white font-['Plus_Jakarta_Sans',sans-serif] font-medium py-4 px-10 rounded-full transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-pink-500/20 flex items-center justify-center gap-2 text-lg w-fit cursor-pointer"
                             >
                                 Secure Your Beta Spot (€9)
                             </a>

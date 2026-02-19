@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Bell } from "lucide-react";
 
 export function Header() {
-  const isDarkMode = true; // Toggle this to false for light mode
+  const isDarkMode = false; // Toggle this to false for light mode
 
   return (
     <header className={`w-full ${isDarkMode ? "bg-[#000]" : "bg-[#faf9fc]"} px-6 py-6 pb-4 md:px-12 lg:px-20`}>

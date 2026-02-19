@@ -22,10 +22,9 @@ export function About() {
                             href="https://instagram.com/nicheneeds.ai"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[#2c2c2c] text-neutral-100 px-[32px] py-[16px] rounded-full border border-[#2c2c2c] hover:bg-[#1e1e1e] transition-colors whitespace-nowrap cursor-pointer inline-block text-center"
-                            aria-label="Follow NicheNeeds on Instagram"
+                            className="bg-[#2e2e2e] hover:bg-[#2e2e2e] text-white font-['Plus_Jakarta_Sans',sans-serif] font-medium py-4 px-10 rounded-full transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-black-500/20 flex items-center justify-center gap-2 text-lg w-fit cursor-pointer"
                         >
-                            <span className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm text-[16px]">Learn About Our Studio Journey</span>
+                            Learn More About Our Story
                         </a>
                     </div>
                 </div>

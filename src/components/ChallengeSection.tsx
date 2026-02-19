@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 
 export function ChallengeSection() {
-    const isDarkMode = true; // Toggle this to false for light mode
+    const isDarkMode = false; // Toggle this to false for light mode
     const scrollRef = useRef<HTMLDivElement>(null);
 
     const weeks = [
@@ -80,47 +80,53 @@ export function ChallengeSection() {
             <div className="max-w-[1000px] mx-auto">
                 {/* Scrollable Container */}
                 <div className="mb-4">
-                    {/* <h2 className={`font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm ${isDarkMode ? "text-white" : "text-[#2e2e2e]/60"}`}>
+                    <h2 className={`font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm ${isDarkMode ? "text-white" : "text-[#2e2e2e]/60"}`}>
                         15-Week MVP Challenge Progress
-                    </h2> */}
+                    </h2>
                 </div>
                 <div
                     ref={scrollRef}
-                    className="overflow-x-auto hide-scrollbar py-5 -my-4 touch-pan-x"
+                    className="overflow-x-auto hide-scrollbar pb-10 pt-5 -my-4 touch-pan-x"
                 >
                     <div className="flex gap-3 min-w-max items-center">
                         {weeks.map((week) => (
-                            <div
-                                key={week.id}
-                                className={`
-                                    relative flex flex-col items-center justify-center
-                                    w-24 h-24 md:w-28 md:h-28 rounded-full border transition-all duration-300
-                                    ${week.active
-                                        ? isDarkMode
-                                            ? "bg-[#faf9fc] border-white z-10"
-                                            : "bg-white border-white shadow-sm z-10"
-                                        : isDarkMode
-                                            ? "bg-gray-200/25 border-white/10 text-white/50"
-                                            : "bg-gray-100 border-gray-200 text-[#2e2e2e]/40"
-                                    }
-                                `}
-                            >
-                                <span
-                                    className={`text-[10px] md:text-xs font-['Plus_Jakarta_Sans',sans-serif] tracking-wider mb-1 ${week.active
-                                        ? "text-[#2e2e2e]/60"
-                                        : isDarkMode ? "text-white/40" : "text-[#2e2e2e]/30"
-                                        }`}
+                            <div key={week.id} className={`relative flex flex-col items-center justify-center ${week.active && !isDarkMode ? "drop-shadow-[0_1px_2px_rgba(0,0,0,0.1)]" : ""}`}>
+                                <div
+                                    className={`
+                                        relative flex flex-col items-center justify-center
+                                        w-24 h-24 md:w-28 md:h-28 rounded-full border transition-all duration-300
+                                        ${week.active
+                                            ? isDarkMode
+                                                ? "bg-[#faf9fc] border-white z-10"
+                                                : "bg-white border-white z-10"
+                                            : isDarkMode
+                                                ? "bg-gray-200/25 border-white/10 text-white/50"
+                                                : "bg-gray-100 border-gray-200 text-[#2e2e2e]/40"
+                                        }
+                                    `}
                                 >
-                                    WEEK {week.id}
-                                </span>
-                                <span
-                                    className={`text-sm md:text-base font-['Plus_Jakarta_Sans',sans-serif] font-bold text-center leading-tight px-1 ${week.active
-                                        ? "text-[#000]"
-                                        : isDarkMode ? "text-white/60" : "text-[#2e2e2e]/40"
-                                        }`}
-                                >
-                                    {week.title}
-                                </span>
+                                    <span
+                                        className={`text-[10px] md:text-xs font-['Plus_Jakarta_Sans',sans-serif] tracking-wider mb-1 ${week.active
+                                            ? "text-[#2e2e2e]/60"
+                                            : isDarkMode ? "text-white/40" : "text-[#2e2e2e]/30"
+                                            }`}
+                                    >
+                                        WEEK {week.id}
+                                    </span>
+                                    <span
+                                        className={`text-sm md:text-base font-['Plus_Jakarta_Sans',sans-serif] font-bold text-center leading-tight px-1 ${week.active
+                                            ? "text-[#000]"
+                                            : isDarkMode ? "text-white/60" : "text-[#2e2e2e]/40"
+                                            }`}
+                                    >
+                                        {week.title}
+                                    </span>
+                                </div>
+                                {week.active && (
+                                    <div className={`absolute -bottom-[6px] left-1/2 transform -translate-x-1/2 w-6 h-6 rotate-45 rounded-sm z-0
+                                        ${isDarkMode ? "bg-[#faf9fc] border-r border-b border-white" : "bg-white border-r border-b border-white"}
+                                    `} />
+                                )}
                             </div>
                         ))}
                     </div>
