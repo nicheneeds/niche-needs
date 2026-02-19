@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 
 export function ChallengeSection() {
+    const isDarkMode = true; // Toggle this to false for light mode
     const scrollRef = useRef<HTMLDivElement>(null);
 
     const weeks = [
@@ -70,7 +71,7 @@ export function ChallengeSection() {
     }, []);
 
     return (
-        <section className="w-full bg-[#000] py-4 pt-0 pl-6 pr-0 md:px-12 lg:px-20 select-none">
+        <section className={`w-full ${isDarkMode ? "bg-[#000]" : "bg-[#faf9fc]"} py-4 pt-0 pl-6 pr-0 md:px-12 lg:px-20 select-none`}>
             <style dangerouslySetInnerHTML={{
                 __html: `
                 .hide-scrollbar::-webkit-scrollbar { display: none !important; }
@@ -78,7 +79,11 @@ export function ChallengeSection() {
             `}} />
             <div className="max-w-[1000px] mx-auto">
                 {/* Scrollable Container */}
-                <div className="mb-4"><h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-white    text-sm">15-Week MVP Challenge Progress</h2></div>
+                <div className="mb-4">
+                    <h2 className={`font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm ${isDarkMode ? "text-white" : "text-[#2e2e2e]/60"}`}>
+                        15-Week MVP Challenge Progress
+                    </h2>
+                </div>
                 <div
                     ref={scrollRef}
                     className="overflow-x-auto hide-scrollbar py-5 -my-4 touch-pan-x"
@@ -91,19 +96,27 @@ export function ChallengeSection() {
                                     relative flex flex-col items-center justify-center
                                     w-24 h-24 md:w-28 md:h-28 rounded-full border transition-all duration-300
                                     ${week.active
-                                        ? "bg-[#faf9fc] border-white  z-10 "
-                                        : "bg-gray-200/25 border-white/10 text-white/50"
+                                        ? isDarkMode
+                                            ? "bg-[#faf9fc] border-white z-10"
+                                            : "bg-white border-white shadow-sm z-10"
+                                        : isDarkMode
+                                            ? "bg-gray-200/25 border-white/10 text-white/50"
+                                            : "bg-gray-100 border-gray-200 text-[#2e2e2e]/40"
                                     }
                                 `}
                             >
                                 <span
-                                    className={`text-[10px] md:text-xs font-['Plus_Jakarta_Sans',sans-serif] tracking-wider mb-1 ${week.active ? "text-[#2e2e2e]/60" : "text-white/40"
+                                    className={`text-[10px] md:text-xs font-['Plus_Jakarta_Sans',sans-serif] tracking-wider mb-1 ${week.active
+                                            ? "text-[#2e2e2e]/60"
+                                            : isDarkMode ? "text-white/40" : "text-[#2e2e2e]/30"
                                         }`}
                                 >
                                     WEEK {week.id}
                                 </span>
                                 <span
-                                    className={`text-sm md:text-base font-['Plus_Jakarta_Sans',sans-serif] font-bold text-center leading-tight px-1 ${week.active ? "text-[#000]" : "text-white/60"
+                                    className={`text-sm md:text-base font-['Plus_Jakarta_Sans',sans-serif] font-bold text-center leading-tight px-1 ${week.active
+                                            ? "text-[#000]"
+                                            : isDarkMode ? "text-white/60" : "text-[#2e2e2e]/40"
                                         }`}
                                 >
                                     {week.title}
