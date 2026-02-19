@@ -3,7 +3,7 @@ import { Lock } from "lucide-react";
 
 export function ChallengeSection() {
     const isDarkMode = false; // Toggle this to false for light mode
-    const usePinkActiveWeek = true; // Toggle this to true for #ff1f7a active week style
+    const usePinkActiveWeek = false; // Toggle this to true for #ff1f7a active week style
     const scrollRef = useRef<HTMLDivElement>(null);
 
     const weeks = [
