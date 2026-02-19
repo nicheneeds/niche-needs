@@ -4,7 +4,7 @@ export function PrivacyPage() {
     return (
         <>
             <main className="w-full bg-[#ece6e8] px-6 py-16 md:py-24 md:px-12 lg:px-20">
-                <div className="max-w-[800px] mx-auto">
+                <div className="max-w-[1200px] mx-auto">
                     <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-3xl md:text-4xl lg:text-5xl mb-12">
                         Privacy <span className="font-['Playfair_Display',sans-serif] italic font-normal">Policy</span>
                     </h1>

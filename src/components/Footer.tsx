@@ -48,12 +48,12 @@ export function Footer() {
           </div>
 
           {/* Heading */}
-          <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-white text-3xl md:text-4xl lg:text-5xl leading-tight mb-8">
-            Looking for {" "}
+          <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-white text-3xl md:text-3xl lg:text-3xl leading-tight mb-8">
+            Want to improve your{" "}
             <span className="font-['Playfair_Display',sans-serif] italic">
-              AI
-            </span>
-            <br></br> expertise?
+              AI problem solving
+            </span> skills?
+            <br></br>
           </h3>
 
           {/* Email CTA */}
@@ -61,7 +61,7 @@ export function Footer() {
             href="mailto:hello@nicheneeds.com"
             className="inline-flex items-center gap-2 bg-white text-black font-['Plus_Jakarta_Sans',sans-serif] font-medium px-8 py-4 rounded-full group"
           >
-            <span className="tracking-[0.28px]">Email Us</span>
+            <span className="tracking-[0.28px]">Get In Touch</span>
             <svg
               className="w-4 h-4"
               fill="none"

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export function Header() {
   return (
-    <header className="w-full bg-[#ece6e8] px-6 py-8 md:px-12 lg:px-20">
+    <header className="w-full bg-[#ece6e8] text-black px-6 py-10 md:px-12 lg:px-20">
       <div className="max-w-[1200px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 hover:opacity-70 transition-opacity cursor-pointer">
@@ -18,7 +18,7 @@ export function Header() {
               </svg>
             </div>
           </div>
-          <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm md:text-base tracking-[0.3px]">NicheNeeds</h1>
+          <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm md:text-base tracking-[0.3px] text-black">NicheNeeds: Week 1 of 15-Week MVP Challenge</h1>
         </Link>
 
         {/* Navigation */}

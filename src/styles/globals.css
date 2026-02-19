@@ -1,10 +1,11 @@
+@import "tailwindcss";
 @custom-variant dark (&:is(.dark *));
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
   --font-size: 16px;
-  --background: #ffffff;
+  --background: color(srgb 0.9818 0.9775 0.9889);
   --foreground: oklch(0.145 0 0);
   --card: #ffffff;
   --card-foreground: oklch(0.145 0 0);
@@ -182,6 +183,18 @@
   }
 }
 
+
 html {
   font-size: var(--font-size);
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
