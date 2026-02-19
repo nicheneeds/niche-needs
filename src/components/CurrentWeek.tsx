@@ -1,4 +1,4 @@
-export function About() {
+export function CurrentWeek() {
   return (
     <section className="w-full bg-[#ece6e8] px-6 py-16 md:py-24 md:px-12 lg:px-20" aria-labelledby="about-heading">
       <div className="max-w-[1200px] mx-auto flex flex-col items-center">
