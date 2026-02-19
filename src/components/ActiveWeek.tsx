@@ -30,7 +30,7 @@ export function ActiveWeek() {
                         </div>
 
                         <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-lg md:text-xl leading-relaxed max-w-xl">
-                            Save time editing your raw recorded videos.
+                            Save time turning your recorded video into high-impact posts.
                         </p>
 
                         <div className="space-y-4">
@@ -76,7 +76,7 @@ export function ActiveWeek() {
                         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
                             {/* The Old Way */}
                             <div className="flex-1 flex gap-4 items-start bg-white p-6 rounded-2xl border border-gray-200 w-full">
-                                <div className="mt-2 w-1.5 h-1.5 rounded-full bg-gray-300 shrink-0" />
+                                <div className="" />
                                 <p className="font-['Plus_Jakarta_Sans',sans-serif] text-[#878787] text-lg leading-relaxed">
                                     <span className="text-[#2e2e2e] font-bold">The Old Way:</span> Time-consuming manual captioning, trimming, and assembly.
                                 </p>
@@ -89,9 +89,9 @@ export function ActiveWeek() {
 
                             {/* The Agentic Way */}
                             <div className="flex-1 flex gap-4 items-start bg-white p-6 rounded-2xl border border-[#ff3385] w-full ring-1 ring-[#ff3385]/10">
-                                <div className="mt-2 w-1.5 h-1.5 rounded-full bg-[#ff3385] shrink-0" />
+                                <div className="" />
                                 <p className="font-['Plus_Jakarta_Sans',sans-serif] text-[#878787] text-lg leading-relaxed">
-                                    <span className="text-[#ff3385] font-bold">The Agentic Way:</span> One-click transcription, automated styling, and trimming.
+                                    <span className="text-[#ff3385] font-bold">The Agentic Way:</span> One-click transcription, styling, and trimming.
                                 </p>
                             </div>
                         </div>

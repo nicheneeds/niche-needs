@@ -80,9 +80,9 @@ export function ChallengeSection() {
             <div className="max-w-[1000px] mx-auto">
                 {/* Scrollable Container */}
                 <div className="mb-4">
-                    <h2 className={`font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm ${isDarkMode ? "text-white" : "text-[#2e2e2e]/60"}`}>
+                    {/* <h2 className={`font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm ${isDarkMode ? "text-white" : "text-[#2e2e2e]/60"}`}>
                         15-Week MVP Challenge Progress
-                    </h2>
+                    </h2> */}
                 </div>
                 <div
                     ref={scrollRef}
@@ -107,16 +107,16 @@ export function ChallengeSection() {
                             >
                                 <span
                                     className={`text-[10px] md:text-xs font-['Plus_Jakarta_Sans',sans-serif] tracking-wider mb-1 ${week.active
-                                            ? "text-[#2e2e2e]/60"
-                                            : isDarkMode ? "text-white/40" : "text-[#2e2e2e]/30"
+                                        ? "text-[#2e2e2e]/60"
+                                        : isDarkMode ? "text-white/40" : "text-[#2e2e2e]/30"
                                         }`}
                                 >
                                     WEEK {week.id}
                                 </span>
                                 <span
                                     className={`text-sm md:text-base font-['Plus_Jakarta_Sans',sans-serif] font-bold text-center leading-tight px-1 ${week.active
-                                            ? "text-[#000]"
-                                            : isDarkMode ? "text-white/60" : "text-[#2e2e2e]/40"
+                                        ? "text-[#000]"
+                                        : isDarkMode ? "text-white/60" : "text-[#2e2e2e]/40"
                                         }`}
                                 >
                                     {week.title}
