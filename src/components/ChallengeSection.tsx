@@ -18,7 +18,7 @@ export function ChallengeSection() {
     ];
 
     return (
-        <section className="w-full bg-[#000] py-6 pt-0 px-6 md:px-12 lg:px-20">
+        <section className="w-full bg-[#000] py-4 pt-0 pl-6 pr-0 md:px-12 lg:px-20">
             <div className="max-w-[1200px] mx-auto">
                 {/* <div className="mb-8">
                     <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-white/40 text-sm tracking-[0.2em] uppercase">
@@ -27,7 +27,7 @@ export function ChallengeSection() {
                 </div> */}
 
                 {/* Scrollable Container */}
-                <div className="overflow-x-hidden hide-scrollbar py-5 -my-4">
+                <div className="overflow-x-auto hide-scrollbar py-5 -my-4">
                     <div className="flex gap-3 min-w-max items-center">
                         {weeks.map((week) => (
                             <div
