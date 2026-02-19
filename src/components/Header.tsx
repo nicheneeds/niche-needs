@@ -17,7 +17,7 @@ export function Header() {
                   d="M20.3229 9.88135C18.9334 -1.15029 2.92562 -1.1587 1.60459 9.88135"
                   stroke={isDarkMode ? "white" : "#2e2e2e"}
                   strokeLinecap="round"
-                  strokeWidth="3.20886"
+                  strokeWidth="3"
                 />
               </svg>
             </div>
@@ -27,13 +27,13 @@ export function Header() {
                   d="M20.3229 9.88135C18.9334 -1.15029 2.92562 -1.1587 1.60459 9.88135"
                   stroke={isDarkMode ? "white" : "#2e2e2e"}
                   strokeLinecap="round"
-                  strokeWidth="3.20886"
+                  strokeWidth="3"
                 />
               </svg>
             </div>
           </div>
-          <h1 className={`font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm md:text-base tracking-[0.3px] ${isDarkMode ? "text-white" : "text-[#2e2e2e]"}`}>
-            NicheNeeds: 15-Week MVP Challenge
+          <h1 className={`font-['Plus_Jakarta_Sans',sans-serif] font-bold text-sm md:text-base tracking-[0.3px] ${isDarkMode ? "text-white" : "text-[#2e2e2e]"}`}>
+            NicheNeeds
           </h1>
         </Link>
 

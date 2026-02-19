@@ -81,11 +81,11 @@ export function ChallengeSection() {
             `}} />
             <div className="max-w-[1000px] mx-auto">
                 {/* Scrollable Container */}
-                {/* <div className="mb-4">
+                <div className="mb-4">
                     <h2 className={`font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm ${isDarkMode ? "text-white" : "text-[#2e2e2e]/60"}`}>
                         15-Week MVP Challenge Progress
                     </h2>
-                </div> */}
+                </div>
                 <div
                     ref={scrollRef}
                     className="overflow-x-auto hide-scrollbar pb-10 pt-5 -my-4 touch-pan-x"
