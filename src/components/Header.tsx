@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Bell } from "lucide-react";
+// import { Bell } from "lucide-react";
+import { BellDot } from "lucide-react";
 
 export function Header() {
   const isDarkMode = false; // Toggle this to false for light mode
@@ -44,7 +45,12 @@ export function Header() {
             rel="noopener noreferrer"
             className={`font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm tracking-[0.28px] hover:opacity-70 transition-opacity cursor-pointer flex items-center gap-2 ${isDarkMode ? "text-[#fff]" : "text-[#2e2e2e]"}`}
           >
-            <Bell className="w-4 h-4" strokeWidth={3} />
+
+            {/* <Bell className="w-4 h-4" strokeWidth={3.20886} /> */}
+            <BellDot
+              className="[&>circle]:fill-red-500 [&>circle]:stroke-red-500" strokeWidth={3.20886}
+              size={20}
+            />
           </a>
         </nav>
       </div>
