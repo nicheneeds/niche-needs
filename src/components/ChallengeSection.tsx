@@ -1,4 +1,8 @@
+import { useRef, useEffect } from "react";
+
 export function ChallengeSection() {
+    const scrollRef = useRef<HTMLDivElement>(null);
+
     const weeks = [
         { id: 1, title: "Magic Edit", active: true },
         { id: 2, title: "?", active: false },
@@ -17,17 +21,62 @@ export function ChallengeSection() {
         { id: 15, title: "?", active: false },
     ];
 
-    return (
-        <section className="w-full bg-[#000] py-4 pt-0 pl-6 pr-0 md:px-12 lg:px-20">
-            <div className="max-w-[1200px] mx-auto">
-                {/* <div className="mb-8">
-                    <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-white/40 text-sm tracking-[0.2em] uppercase">
-                        15-Week Studio Challenge
-                    </h2>
-                </div> */}
+    useEffect(() => {
+        const slider = scrollRef.current;
+        if (!slider) return;
 
+        let isDown = false;
+        let startX: number;
+        let scrollLeft: number;
+
+        const handleMouseDown = (e: MouseEvent) => {
+            isDown = true;
+            slider.classList.add('active');
+            slider.style.cursor = 'grabbing';
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        };
+
+        const handleMouseLeave = () => {
+            isDown = false;
+            slider.style.cursor = 'grab';
+        };
+
+        const handleMouseUp = () => {
+            isDown = false;
+            slider.style.cursor = 'grab';
+        };
+
+        const handleMouseMove = (e: MouseEvent) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // scroll-fast
+            slider.scrollLeft = scrollLeft - walk;
+        };
+
+        slider.addEventListener('mousedown', handleMouseDown);
+        slider.addEventListener('mouseleave', handleMouseLeave);
+        slider.addEventListener('mouseup', handleMouseUp);
+        slider.addEventListener('mousemove', handleMouseMove);
+        slider.style.cursor = 'grab';
+
+        return () => {
+            slider.removeEventListener('mousedown', handleMouseDown);
+            slider.removeEventListener('mouseleave', handleMouseLeave);
+            slider.removeEventListener('mouseup', handleMouseUp);
+            slider.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+
+    return (
+        <section className="w-full bg-[#000] py-4 pt-0 pl-6 pr-0 md:px-12 lg:px-20 select-none">
+            <div className="max-w-[1200px] mx-auto">
                 {/* Scrollable Container */}
-                <div className="overflow-x-auto hide-scrollbar py-5 -my-4">
+                <div
+                    ref={scrollRef}
+                    className="overflow-x-auto hide-scrollbar py-5 -my-4 touch-pan-x"
+                >
                     <div className="flex gap-3 min-w-max items-center">
                         {weeks.map((week) => (
                             <div
