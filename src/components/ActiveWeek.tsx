@@ -15,7 +15,7 @@ export function ActiveWeek() {
     }, []);
 
     return (
-        <section className="w-full bg-[#faf9fc] pt-0 pb-10 px-6 md:px-12 lg:px-20 lg:pt-0 lg:pb-10 overflow-hidden">
+        <section className="w-full bg-[#faf9fc] pt-0 pb-20 px-6 md:px-12 lg:px-20 lg:pt-0 lg:pb-20 overflow-hidden">
             <div className="max-w-[1000px] mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Content */}
@@ -25,26 +25,26 @@ export function ActiveWeek() {
                                 Week 1 Is <span className="text-[red]">Live</span>
                             </p> */}
                             <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-4xl md:text-5xl lg:text-5xl text-[#2e2e2e] leading-[1.1]">
-                                One Click Editing For <span className="font-['Playfair_Display',sans-serif] italic">Busy</span> Professionals
+                                No Frills Video Editing For <span className="font-['Playfair_Display',sans-serif] italic">Busy</span> People
                             </h2>
                         </div>
 
                         <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-lg md:text-xl leading-relaxed max-w-xl">
-                            Save time turning your recorded video into high-impact posts.
+                            Turn your recorded videos into high-impact posts in one step.
                         </p>
 
                         <div className="space-y-4">
                             <a
-                                href="https://buy.stripe.com/fZuaEY3sV8gv9A83To2kw02"
+                                href="https://chat.whatsapp.com/DdTSkUBHOES6H1lll88u9S"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-[#ff3385] hover:bg-[#ff1f7a] text-white font-['Plus_Jakarta_Sans',sans-serif] font-medium py-4 px-10 rounded-full transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-pink-500/20 flex items-center justify-center gap-2 text-lg w-fit cursor-pointer"
                             >
-                                Secure Your Beta Spot (€9)
+                                Join WhatsApp Community To Get Access
                             </a>
 
                             <p className="font-['Plus_Jakarta_Sans',sans-serif] text-gray-400 text-sm tracking-wide">
-                                Limited to 10 testers
+                                Try out Magic Edit and help us refine it with your feedback!
                             </p>
                         </div>
                     </div>

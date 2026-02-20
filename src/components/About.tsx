@@ -6,15 +6,15 @@ export function About() {
             <div className="max-w-[1000px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center">
                 {/* Left Column - Content */}
                 <div className="flex flex-col gap-6 lg:gap-6">
-                    <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-3xl md:text-4xl lg:text-5xl leading-[1.1] text-[#2c2c2c]">
-                        NicheNeeds is building {" "}
+                    <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-4xl md:text-5xl lg:text-5xl text-[#2e2e2e] leading-[1.1]">
+                        We're Building {" "}
                         <span className="font-['Playfair_Display',sans-serif] italic font-normal">
-                            magic
-                        </span> in Amsterdam.
+                            Magic
+                        </span> In Amsterdam.
                     </h1>
 
-                    <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-base md:text-lg tracking-[0.3px] leading-relaxed">
-                        Launched in 2025, we're a creative lab blending 15+ years of product design experience with the speed of agentic AI.
+                    <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-lg md:text-xl leading-relaxed max-w-xl">
+                        Launched in 2025, NicheNeeds is a creative lab blending 15+ years of product design experience with the speed of agentic AI.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
