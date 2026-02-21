@@ -40,11 +40,11 @@ export function ActiveWeek() {
                                 rel="noopener noreferrer"
                                 className="bg-[#ff3385] hover:bg-[#ff1f7a] text-white font-['Plus_Jakarta_Sans',sans-serif] font-medium py-4 px-10 rounded-full transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-pink-500/20 flex items-center justify-center gap-2 text-lg w-fit cursor-pointer"
                             >
-                                Join WhatsApp Community To Get Access
+                                Get Early Access For Free
                             </a>
 
                             <p className="font-['Plus_Jakarta_Sans',sans-serif] text-gray-400 text-sm tracking-wide">
-                                Try out Magic Edit and help us refine it with your feedback!
+                                Try now, pay later for Magic Edit.
                             </p>
                         </div>
                     </div>
