@@ -73,7 +73,7 @@ export function ChallengeSection() {
     }, []);
 
     return (
-        <section className={`w-full ${isDarkMode ? "bg-[#000]" : "bg-[#faf9fc]"} py-4 pt-0 pl-6 pr-0 md:px-12 lg:px-20 select-none antialiased`}>
+        <section className={`w-full ${isDarkMode ? "bg-[#000]" : "bg-[#faf9fc]"} py-0 pt-0 pl-6 pr-0 md:px-12 lg:px-20 select-none antialiased`}>
             <style dangerouslySetInnerHTML={{
                 __html: `
                 .hide-scrollbar::-webkit-scrollbar { display: none !important; }
@@ -88,7 +88,7 @@ export function ChallengeSection() {
                 </div>
                 <div
                     ref={scrollRef}
-                    className="overflow-x-auto hide-scrollbar pb-10 pt-5 -my-4 touch-pan-x"
+                    className="overflow-x-auto hide-scrollbar pb-10 pt-3 -my-4 touch-pan-x"
                 >
                     <div className="flex gap-3 min-w-max items-center">
                         {weeks.map((week) => (
@@ -96,7 +96,7 @@ export function ChallengeSection() {
                                 <div
                                     className={`
                                         relative flex flex-col items-center justify-center
-                                        w-24 h-24 md:w-28 md:h-28 rounded-full border transition-all duration-300
+                                        w-22 h-22 md:w-28 md:h-28 rounded-full border transition-all duration-300
                                         ${week.active
                                             ? usePinkActiveWeek
                                                 ? "bg-[#ff1f7a] border-[#ff1f7a] text-white shadow-lg shadow-pink-500/20 z-10"

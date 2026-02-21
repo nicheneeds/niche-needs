@@ -6,7 +6,7 @@ export function Header() {
   const isDarkMode = false; // Toggle this to false for light mode
 
   return (
-    <header className={`w-full ${isDarkMode ? "bg-[#000]" : "bg-[#faf9fc]"} px-6 py-6 pb-4 md:px-12 lg:px-20`}>
+    <header className={`w-full ${isDarkMode ? "bg-[#000]" : "bg-[#faf9fc]"} px-6 py-4 pb-3 md:px-12 lg:px-20`}>
       <div className="max-w-[1000px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 hover:opacity-70 transition-opacity cursor-pointer">

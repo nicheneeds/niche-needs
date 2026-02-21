@@ -60,7 +60,7 @@ export function ActiveWeek() {
             <div className="max-w-[1000px] mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Content */}
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-3">
                         <div className="space-y-2">
                             {/* <p className="font-['Plus_Jakarta_Sans',sans-serif] text-[#878787] text-sm md:text-base font-medium">
                                 Week 1 Is <span className="text-[red]">Live</span>
