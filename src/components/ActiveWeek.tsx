@@ -125,11 +125,11 @@ export function ActiveWeek() {
                             )}
 
                             <p className="font-['Plus_Jakarta_Sans',sans-serif] text-gray-400 text-sm tracking-wide">
-                                Free to try · No credit card · I'll send you access within the hour
+                                Free to try · No credit card · Access within the hour
                             </p>
 
-                            <div className="pt-2 max-w-xl">
-                                <div className="h-[1px] w-full bg-gray-200/50 mb-5" />
+                            <div className="pt-0 max-w-xl">
+                                <div className="h-[1px] w-full bg-gray-200/50 mb-4" />
                                 <div className="flex items-center gap-3">
                                     <img
                                         src="/alok.JPG"
