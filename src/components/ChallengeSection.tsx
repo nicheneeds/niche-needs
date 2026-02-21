@@ -123,7 +123,7 @@ export function ChallengeSection() {
                                         className={`text-sm md:text-base font-['Plus_Jakarta_Sans',sans-serif] font-bold text-center leading-tight px-1 flex items-center justify-center ${week.active
                                             ? usePinkActiveWeek
                                                 ? "text-white"
-                                                : "text-[#000]"
+                                                : "text-[#2e2e2e]"
                                             : isDarkMode ? "text-white/60" : "text-[#2e2e2e]/40"
                                             }`}
                                     >
