@@ -22,7 +22,7 @@ export function About() {
                             href="https://instagram.com/nicheneeds.ai"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[#2e2e2e] hover:bg-[#2e2e2e] text-white font-['Plus_Jakarta_Sans',sans-serif] font-medium py-4 px-10 rounded-full transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-black-500/20 flex items-center justify-center gap-2 text-lg w-fit cursor-pointer"
+                            className="bg-[#2e2e2e] hover:bg-[#2e2e2e] text-white font-['Plus_Jakarta_Sans',sans-serif] font-medium py-4 px-10 rounded-full transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-black-500/20 flex items-center justify-center gap-2 text-lg w-full sm:w-fit cursor-pointer"
                         >
                             Learn More About Our Story
                         </a>
