@@ -1,18 +1,18 @@
 import { useState } from "react";
-// import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 // import videoAsset from "../assets/content.mp4";
 // import videoPoster from "../assets/content-cover.webp";
 
 export function ActiveWeek() {
     // const videoRef = useRef<HTMLVideoElement>(null);
-    const [formData, setFormData] = useState({ name: "", email: "" });
+    const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
         // Simple validation
-        if (!formData.name.trim() || !formData.email.trim()) {
+        if (!email.trim()) {
             return;
         }
 
@@ -25,8 +25,8 @@ export function ActiveWeek() {
 
             // Prepare form data for submission
             const queryParams = new URLSearchParams({
-                name: formData.name,
-                email: formData.email,
+                name: "", // Sending empty name as we only collect email now
+                email: email,
                 timestamp: new Date().toISOString()
             });
 
@@ -37,7 +37,7 @@ export function ActiveWeek() {
             });
 
             setStatus("success");
-            setFormData({ name: "", email: "" });
+            setEmail("");
 
             // Revert success message after 5 seconds
             setTimeout(() => setStatus("idle"), 5000);
@@ -83,41 +83,33 @@ export function ActiveWeek() {
                                     </p>
                                 </div>
                             ) : (
-                                <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                                    <div className="flex flex-col sm:flex-row gap-3">
-                                        <input
-                                            type="text"
-                                            placeholder="Name"
-                                            required
-                                            className="flex-1 bg-white border border-gray-200 py-4 px-6 rounded-full font-['Plus_Jakarta_Sans',sans-serif] focus:outline-none focus:ring-2 focus:ring-[#ff3385]/20 focus:border-[#ff3385] transition-all"
-                                            value={formData.name}
-                                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                        />
+                                <form onSubmit={handleSubmit} className="relative w-full max-w-lg">
+                                    <div className="relative flex items-center">
                                         <input
                                             type="email"
-                                            placeholder="Email"
+                                            placeholder="Enter your email"
                                             required
-                                            className="flex-1 bg-white border border-gray-200 py-4 px-6 rounded-full font-['Plus_Jakarta_Sans',sans-serif] focus:outline-none focus:ring-2 focus:ring-[#ff3385]/20 focus:border-[#ff3385] transition-all"
-                                            value={formData.email}
-                                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                            className="w-full bg-white border border-gray-200 py-5 pl-5 pr-48 rounded-2xl font-['Plus_Jakarta_Sans',sans-serif] text-lg focus:outline-none transition-all placeholder:text-gray-400"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
                                         />
+                                        <button
+                                            type="submit"
+                                            disabled={status === "loading"}
+                                            className="absolute right-2.5 bg-[#141414] hover:bg-[#141414] text-white px-5 py-3.5 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed group flex items-center gap-2"
+                                        >
+                                            {status === "loading" ? (
+                                                <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mx-auto" />
+                                            ) : (
+                                                <>
+                                                    <span className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm whitespace-nowrap">Send me access</span>
+                                                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5" />
+                                                </>
+                                            )}
+                                        </button>
                                     </div>
-                                    <button
-                                        type="submit"
-                                        disabled={status === "loading"}
-                                        className="bg-[#ff3385] hover:bg-[#ff1f7a] text-white font-['Plus_Jakarta_Sans',sans-serif] font-medium py-4 px-10 rounded-full transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-pink-500/20 flex items-center justify-center gap-2 text-lg w-full md:w-fit cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-                                    >
-                                        {status === "loading" ? (
-                                            <span className="flex items-center gap-2">
-                                                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                                                Sending...
-                                            </span>
-                                        ) : (
-                                            "Send me access"
-                                        )}
-                                    </button>
                                     {status === "error" && (
-                                        <p className="text-red-500 text-sm px-4 font-['Plus_Jakarta_Sans',sans-serif]">
+                                        <p className="absolute -bottom-6 left-4 text-red-500 text-xs font-['Plus_Jakarta_Sans',sans-serif]">
                                             Something went wrong. Please try again.
                                         </p>
                                     )}
