@@ -9,7 +9,7 @@ export function Footer() {
     >
       <div className="max-w-[1000px] mx-auto">
         {/* Vertical Layout */}
-        <div className="mb-16">
+        <div className="mb-6">
           {/* Logo */}
           <div className="flex items-center gap-2 mb-12">
             <div className="flex">
@@ -48,16 +48,16 @@ export function Footer() {
           </div>
 
           {/* Heading */}
-          <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-white text-3xl md:text-3xl lg:text-3xl leading-tight mb-8">
-            Want to improve your{" "}
-            <span className="font-['Playfair_Display',sans-serif] italic">
-              AI problem solving
-            </span> skills?
+          <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-white text-3xl md:text-3xl lg:text-3xl leading-tight mb-0">
+            15 Yrs UX. 15 Weeks. 15 MVPs.
+            {/* <span className="font-['Playfair_Display',sans-serif] italic">
+              15 Weeks
+            </span> */}
             <br></br>
           </h3>
 
           {/* Email CTA */}
-          <a
+          {/* <a
             href="mailto:hello@nicheneeds.com"
             className="inline-flex items-center gap-2 bg-white text-black font-['Plus_Jakarta_Sans',sans-serif] font-medium px-8 py-4 rounded-full group"
           >
@@ -75,13 +75,16 @@ export function Footer() {
                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
               />
             </svg>
-          </a>
+          </a> */}
         </div>
 
         {/* Footer Links - Full Width Section */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-start sm:items-center border-t border-white/10 pt-8">
           <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-white text-sm tracking-[0.28px]">
             Based in Amsterdam, NL
+          </p>
+          <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-white text-sm tracking-[0.28px]">
+            KVK: 89911431
           </p>
           <a
             href="https://instagram.com/nicheneeds.ai"
@@ -92,23 +95,35 @@ export function Footer() {
             <Instagram className="w-4 h-4" strokeWidth={1.75} />
             Instagram
           </a>
+          <a
+            href="https://instagram.com/nicheneeds.ai"
+            className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer flex items-center gap-2"
+          >
+            Contact Us
+          </a>
+          <Link
+            to="/about"
+            className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer"
+          >
+            About
+          </Link>
           <Link
             to="/terms"
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer"
           >
-            Terms & Conditions
+            Terms
           </Link>
           <Link
             to="/refunds"
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer"
           >
-            Refund Policy
+            Refunds
           </Link>
           <Link
             to="/privacy"
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer"
           >
-            Privacy Policy
+            Privacy
           </Link>
         </div>
       </div>

@@ -3,7 +3,11 @@ import { ArrowRight } from "lucide-react";
 // import videoAsset from "../assets/content.mp4";
 // import videoPoster from "../assets/content-cover.webp";
 
-export function ActiveWeek() {
+interface ActiveWeekProps {
+    selectedWeek: number;
+}
+
+export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
     // const videoRef = useRef<HTMLVideoElement>(null);
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -25,8 +29,9 @@ export function ActiveWeek() {
 
             // Prepare form data for submission
             const queryParams = new URLSearchParams({
-                name: "", // Sending empty name as we only collect email now
+                name: `Week ${selectedWeek}`, // Using name field to ensure it gets captured if script only looks for name/email
                 email: email,
+                week: `Week ${selectedWeek}`, // Adding explicit week param
                 timestamp: new Date().toISOString()
             });
 
@@ -47,18 +52,16 @@ export function ActiveWeek() {
         }
     };
 
-    // useEffect(() => {
-    //     if (videoRef.current) {
-    //         videoRef.current.play().catch(error => {
-    //             console.log("Autoplay prevented:", error);
-    //         });
-    //     }
-    // }, []);
+    if (selectedWeek !== 1 && selectedWeek !== 2) {
+        return null;
+    }
+
+    const isWeek1 = selectedWeek === 1;
 
     return (
-        <section className="w-full bg-[#faf9fc] pt-0 pb-20 px-6 md:px-12 lg:px-20 lg:pt-0 lg:pb-20 overflow-hidden">
+        <section className="w-full bg-[#F9F9F3] pt-0 pb-20 px-6 md:px-12 lg:px-20 lg:pt-0 lg:pb-20 overflow-hidden">
             <div className="max-w-[1000px] mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div key={selectedWeek} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-in fade-in duration-500">
                     {/* Content */}
                     <div className="flex flex-col gap-3">
                         <div className="space-y-2">
@@ -66,12 +69,20 @@ export function ActiveWeek() {
                                 Week 1 Is <span className="text-[red]">Live</span>
                             </p> */}
                             <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-4xl md:text-5xl lg:text-5xl text-[#2e2e2e] leading-[1.1]">
-                                You Recorded It. <span className="font-['Playfair_Display',sans-serif] italic">Now Post It.</span>
+                                {isWeek1 ? (
+                                    <>You Recorded It. <span className="font-['Playfair_Display',sans-serif] italic">Now Post It.</span></>
+                                ) : (
+                                    <><span className="font-['Playfair_Display',sans-serif] italic">Coming Soon...</span></>
+                                )}
                             </h2>
                         </div>
 
                         <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-lg md:text-xl leading-relaxed max-w-xl">
-                            Turn raw footage into a captioned, trimmed post in one click.
+                            {isWeek1 ? (
+                                "Turn raw footage into a captioned, trimmed post in one click."
+                            ) : (
+                                "Drop your email below to get notified when we launch this week's tool."
+                            )}
                         </p>
 
                         <div className="space-y-4">
@@ -84,25 +95,27 @@ export function ActiveWeek() {
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit} className="relative w-full max-w-lg">
-                                    <div className="relative flex items-center">
+                                    <div className="relative flex flex-col sm:block gap-3 sm:gap-0">
                                         <input
                                             type="email"
                                             placeholder="Enter your email"
                                             required
-                                            className="w-full bg-white border border-gray-200 py-5 pl-5 pr-48 rounded-2xl font-['Plus_Jakarta_Sans',sans-serif] text-lg focus:outline-none transition-all placeholder:text-gray-400"
+                                            className="w-full bg-white border border-gray-200 py-5 px-5 sm:pr-48 rounded-2xl font-['Plus_Jakarta_Sans',sans-serif] text-lg focus:outline-none transition-all placeholder:text-gray-400"
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                         />
                                         <button
                                             type="submit"
                                             disabled={status === "loading"}
-                                            className="absolute right-2.5 bg-[#141414] hover:bg-[#141414] text-white px-5 py-3.5 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed group flex items-center gap-2"
+                                            className="w-full sm:w-auto sm:absolute sm:top-1/2 sm:-translate-y-1/2 sm:right-2.5 bg-[#141414] hover:bg-[#141414] text-white px-5 py-4 sm:py-3.5 rounded-2xl sm:rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed group flex items-center justify-center gap-2 mt-2 sm:mt-0"
                                         >
                                             {status === "loading" ? (
                                                 <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mx-auto" />
                                             ) : (
                                                 <>
-                                                    <span className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm whitespace-nowrap">Send me access</span>
+                                                    <span className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-base sm:text-sm whitespace-nowrap">
+                                                        {isWeek1 ? "Send me access" : "Notify Me"}
+                                                    </span>
                                                     <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5" />
                                                 </>
                                             )}
@@ -137,55 +150,29 @@ export function ActiveWeek() {
                     </div>
 
                     {/* Video Player Section */}
-                    <div className="relative group">
-                        <div className="   w-full  overflow-hidden relative">
-                            {/* <video
-                                ref={videoRef}
-                                src={videoAsset}
-                                poster={videoPoster}
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                preload="auto"
-                                className="w-full h-[318px] block"
-                            /> */}
-                            <img
-                                src="/hero.png"
-                                alt="Studio Pass Hero"
-                                className="w-full h-auto block"
-                            />
-                        </div>
+                    {isWeek1 ? (
+                        <div className="relative group">
+                            <div className="   w-full  overflow-hidden relative">
+                                <img
+                                    src="/hero.png"
+                                    alt="Studio Pass Hero"
+                                    className="w-full h-auto block"
+                                />
+                            </div>
 
-                        {/* Shadow/Glow effect */}
-                        <div className="absolute -inset-4 bg-[#ff3385]/5 blur-3xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </div>
+                            {/* Shadow/Glow effect */}
+                            <div className="absolute -inset-4 bg-[#ff3385]/5 blur-3xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </div>
+                    ) : (
+                        <div className="relative group">
+                            <div className="w-full aspect-[4/3] bg-gray-100 rounded-2xl relative flex items-center justify-center">
+                                <span className="text-8xl md:text-9xl text-[#bbbbbb] font-['Plus_Jakarta_Sans',sans-serif] font-bold opacity-50">
+                                    ?
+                                </span>
+                            </div>
+                        </div>
+                    )}
                 </div>
-
-                {/* Problem & Proof Section */}
-                {/* <div className="mt-10 pt-6">
-                    <div className="max-w-[1000px]">
-                        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
-                            <div className="flex-1 flex gap-4 items-start bg-white p-6 rounded-2xl border border-gray-200 w-full">
-                                <div className="" />
-                                <p className="font-['Plus_Jakarta_Sans',sans-serif] text-[#878787] text-lg leading-relaxed">
-                                    <span className="text-[#2e2e2e] font-bold">The Old Way:</span> You spent 2 hours editing. You posted nothing.
-                                </p>
-                            </div>
-
-                            <div className="flex items-center justify-center">
-                                <ArrowRight className="w-6 h-6 text-[#ff3385]/60 rotate-90 md:rotate-0" />
-                            </div>
-
-                            <div className="flex-1 flex gap-4 items-start bg-white p-6 rounded-2xl border border-[#ff3385] w-full ring-1 ring-[#ff3385]/10">
-                                <div className="" />
-                                <p className="font-['Plus_Jakarta_Sans',sans-serif] text-[#878787] text-lg leading-relaxed">
-                                    <span className="text-[#ff3385] font-bold">The Agentic Way:</span> Drop it in. Done in 3 minutes.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
             </div>
         </section>
     );
