@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { Lock } from "lucide-react";
+
 
 interface ChallengeSectionProps {
     selectedWeek: number;
@@ -13,7 +13,7 @@ export function ChallengeSection({ selectedWeek, onSelectWeek }: ChallengeSectio
 
     const weeks = [
         { id: 1, title: "Magic Edit", available: true },
-        { id: 2, title: "?", available: true },
+        { id: 2, title: "WhatsOn", available: true },
         { id: 3, title: "?", available: false },
         { id: 4, title: "?", available: false },
         { id: 5, title: "?", available: false },
@@ -88,7 +88,7 @@ export function ChallengeSection({ selectedWeek, onSelectWeek }: ChallengeSectio
                 {/* Scrollable Container */}
                 <div className="mb-6">
                     <h2 className={`font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm ${isDarkMode ? "text-white" : "text-[#2e2e2e]/60"}`}>
-                        15-Week MVP Challenge Progress
+                        New Niche Problem Solved Every Week
                     </h2>
                 </div>
                 <div
@@ -128,7 +128,7 @@ export function ChallengeSection({ selectedWeek, onSelectWeek }: ChallengeSectio
                                                 : isDarkMode ? "text-white/40" : "text-[#2e2e2e]/30"
                                                 }`}
                                         >
-                                            WEEK {week.id}
+                                            {week.available ? `WEEK ${week.id}` : ""}
                                         </span>
                                         <span
                                             className={`text-sm md:text-base font-['Plus_Jakarta_Sans',sans-serif] font-bold text-center leading-tight px-1 flex items-center justify-center ${isActive
@@ -138,7 +138,7 @@ export function ChallengeSection({ selectedWeek, onSelectWeek }: ChallengeSectio
                                                 : isDarkMode ? "text-white/60" : "text-[#2e2e2e]/40"
                                                 }`}
                                         >
-                                            {!week.available ? <Lock size={18} strokeWidth={2.5} /> : week.title}
+                                            {week.available ? week.title : ""}
                                         </span>
                                     </div>
                                     {isActive && (
