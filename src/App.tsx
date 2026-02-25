@@ -9,12 +9,18 @@ import { RefundsPage } from "./components/RefundsPage";
 import { PrivacyPage } from "./components/PrivacyPage";
 import { SEO } from "./components/SEO";
 
+import { usePostHog } from "@posthog/react";
+
 function ScrollToTop() {
   const { pathname } = useLocation();
+  const posthog = usePostHog();
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+    if (posthog) {
+      posthog.capture("$pageview");
+    }
+  }, [pathname, posthog]);
 
   return null;
 }
