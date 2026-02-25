@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { usePostHog } from "@posthog/react";
 // import videoAsset from "../assets/content.mp4";
 // import videoPoster from "../assets/content-cover.webp";
 
@@ -8,6 +9,7 @@ interface ActiveWeekProps {
 }
 
 export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
+    const posthog = usePostHog();
     // const videoRef = useRef<HTMLVideoElement>(null);
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -42,6 +44,20 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
             });
 
             setStatus("success");
+
+            // Track successful submission in PostHog
+            if (posthog) {
+                posthog.capture("lead_submitted", {
+                    email: email,
+                    week: selectedWeek,
+                    source: "active_week_form"
+                });
+                // Also identify the user so future events are linked to this email
+                posthog.identify(email, {
+                    email: email
+                });
+            }
+
             setEmail("");
 
             // Revert success message after 5 seconds
