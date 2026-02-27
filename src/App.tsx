@@ -7,6 +7,7 @@ import { AssistantsPage } from "./components/AssistantsPage";
 import { TermsPage } from "./components/TermsPage";
 import { RefundsPage } from "./components/RefundsPage";
 import { PrivacyPage } from "./components/PrivacyPage";
+import { UploadPage } from "./components/UploadPage";
 import { SEO } from "./components/SEO";
 
 import { usePostHog } from "@posthog/react";
@@ -35,6 +36,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/upload" element={<UploadPage />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/refunds" element={<RefundsPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
