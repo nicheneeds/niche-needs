@@ -170,7 +170,7 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                         <div className="relative group">
                             <div className="   w-full  overflow-hidden relative">
                                 <img
-                                    src="/hero.png"
+                                    src="/week1-hero.png"
                                     alt="Studio Pass Hero"
                                     className="w-full h-auto block"
                                 />
