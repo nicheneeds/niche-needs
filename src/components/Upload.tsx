@@ -59,10 +59,7 @@ export function Upload() {
             <div className="max-w-[1000px] mx-auto">
                 <div className="flex flex-col gap-6 mb-12">
                     <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-4xl md:text-5xl lg:text-5xl text-[#2e2e2e] leading-[1.1]">
-                        Magic {" "}
-                        <span className="font-['Playfair_Display',sans-serif] italic font-normal">
-                            Edit
-                        </span>.
+                        Magic Edit
                     </h1>
                     <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-lg md:text-xl leading-relaxed max-w-xl">
                         Upload your raw footage and let AI do the heavy lifting.
