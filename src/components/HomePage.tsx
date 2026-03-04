@@ -4,7 +4,7 @@ import { ActiveWeek } from "./ActiveWeek";
 import { Footer } from "./Footer";
 
 export function HomePage() {
-    const [selectedWeek, setSelectedWeek] = useState(2);
+    const [selectedWeek, setSelectedWeek] = useState(3);
 
     return (
         <>

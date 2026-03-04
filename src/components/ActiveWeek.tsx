@@ -74,7 +74,6 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
 
     const isWeek1 = selectedWeek === 1;
     const isWeek2 = selectedWeek === 2;
-    const isWeek3 = selectedWeek === 3;
 
     return (
         <section className="w-full bg-[#F9F9F3] pt-0 pb-20 px-6 md:px-12 lg:px-20 lg:pt-0 lg:pb-20 overflow-hidden">
@@ -92,7 +91,7 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                                 ) : isWeek2 ? (
                                     <>Amsterdam's Best Gigs.<span className="font-['Playfair_Display',sans-serif] italic"> Already In Your Calendar.</span></>
                                 ) : (
-                                    <>What is <span className="font-['Playfair_Display',sans-serif] italic">Week 3's problem?</span></>
+                                    <>Dutch Rental Law. <span className="font-['Playfair_Display',sans-serif] italic">In Your Language.</span></>
                                 )}
                             </h2>
                         </div>
@@ -103,7 +102,7 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                             ) : isWeek2 ? (
                                 "The best Amsterdam gigs added to your calendar in one click."
                             ) : (
-                                "Be the first to know when Week 3 is live"
+                                "Turn landlord disputes into drafted emails in one click."
                             )}
                         </p>
 
@@ -136,7 +135,7 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                                             ) : (
                                                 <>
                                                     <span className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-base sm:text-sm whitespace-nowrap">
-                                                        {isWeek3 ? "Get notified" : "Send me access"}
+                                                        Send me access
                                                     </span>
                                                     <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5" />
                                                 </>
@@ -151,9 +150,9 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                                 </form>
                             )}
 
-                            <p className="font-['Plus_Jakarta_Sans',sans-serif] text-gray-400 text-sm tracking-wide">
-                                Free to try · Access via email
-                            </p>
+                            {/* <p className="font-['Plus_Jakarta_Sans',sans-serif] text-gray-400 text-sm tracking-wide">
+                                Free to try · Access sent via email
+                            </p> */}
 
                             <div className="pt-0 max-w-xl">
                                 <div className="h-[1px] w-full bg-gray-200/50 mb-4" />
@@ -200,9 +199,16 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                         </div>
                     ) : (
                         <div className="relative group">
-                            <div className="w-full aspect-video bg-gray-100 rounded-3xl flex items-center justify-center border border-gray-200 border-dashed">
-                                <span className="font-['Plus_Jakarta_Sans',sans-serif] text-gray-400 font-medium">Coming Soon</span>
+                            <div className="w-full overflow-hidden relative">
+                                <img
+                                    src="/week3-hero.png"
+                                    alt="WoonWijs Hero"
+                                    className="w-full h-auto block"
+                                />
                             </div>
+
+                            {/* Shadow/Glow effect */}
+                            <div className="absolute -inset-4 bg-[#ff3385]/5 blur-3xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
                     )}
                 </div>

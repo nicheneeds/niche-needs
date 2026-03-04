@@ -8,6 +8,8 @@ import { TermsPage } from "./components/TermsPage";
 import { RefundsPage } from "./components/RefundsPage";
 import { PrivacyPage } from "./components/PrivacyPage";
 import { UploadPage } from "./components/UploadPage";
+import { WoonWijsPage } from "./components/WoonWijsPage";
+import { FeedbackWidget } from "./components/FeedbackWidget";
 import { SEO } from "./components/SEO";
 
 import { usePostHog } from "@posthog/react";
@@ -30,6 +32,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <FeedbackWidget />
       <div className="min-h-screen bg-[#ece6e8]">
         <SEO />
         <Header />
@@ -37,6 +40,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/upload" element={<UploadPage />} />
+          <Route path="/woonwijs" element={<WoonWijsPage />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/refunds" element={<RefundsPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
