@@ -102,7 +102,7 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                             ) : isWeek2 ? (
                                 "The best Amsterdam gigs added to your calendar in one click."
                             ) : (
-                                "Turn landlord disputes into drafted emails in one click."
+                                "Turn landlord disputes into drafted emails."
                             )}
                         </p>
 

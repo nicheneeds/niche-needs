@@ -1,5 +1,5 @@
 import { Footer } from "./Footer";
-import { WoonWijs } from "./WoonWijs";
+import { WoonWijs } from "./LocalWoonWijs";
 
 export function WoonWijsPage() {
     return (

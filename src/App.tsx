@@ -32,7 +32,6 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <FeedbackWidget />
       <div className="min-h-screen bg-[#ece6e8]">
         <SEO />
         <Header />
@@ -48,6 +47,7 @@ export default function App() {
           {/* Fallback to home */}
           <Route path="*" element={<HomePage />} />
         </Routes>
+        <FeedbackWidget />
       </div>
     </BrowserRouter>
   );
