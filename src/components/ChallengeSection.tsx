@@ -15,7 +15,7 @@ export function ChallengeSection({ selectedWeek, onSelectWeek }: ChallengeSectio
         { id: 1, title: "Magic Edit", available: true },
         { id: 2, title: "WhatsOn", available: true },
         { id: 3, title: "WoonWijs", available: true },
-        { id: 4, title: "?", available: false },
+        { id: 4, title: "?", available: true },
         { id: 5, title: "?", available: false },
         { id: 6, title: "?", available: false },
         { id: 7, title: "?", available: false },

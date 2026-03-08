@@ -21,29 +21,29 @@ const products: Product[] = [
     },
     {
         id: 2,
-        brand: "Chanel",
-        name: "Week 2",
-        description: "",
+        brand: "NicheNeeds",
+        name: "Week 2: WhatsOn",
+        description: "The best Amsterdam gigs added to your calendar in one click.",
         price: 68,
-        category: "Makeup",
-        image: "https://plus.unsplash.com/premium_photo-1678216285963-253d94232eb7?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cXVlc3Rpb24lMjBtYXJrfGVufDB8fDB8fHww"
+        category: "Entertainment",
+        image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=500&auto=format&fit=crop&q=60"
     },
     {
         id: 3,
-        brand: "Chanel",
-        name: "Week 3",
-        description: "",
+        brand: "NicheNeeds",
+        name: "Week 3: WoonWijs",
+        description: "Rent disputes turned into drafted emails, in your language.",
         price: 68,
-        category: "Makeup",
-        image: "https://plus.unsplash.com/premium_photo-1678216285963-253d94232eb7?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cXVlc3Rpb24lMjBtYXJrfGVufDB8fDB8fHww"
+        category: "Legal",
+        image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=500&auto=format&fit=crop&q=60"
     },
     {
         id: 4,
-        brand: "Estée Lauder",
-        name: "Week 4",
-        description: "",
+        brand: "NicheNeeds",
+        name: "Week 4: Coming Soon",
+        description: "Be the first to know when Week 4's problem solver is live.",
         price: 75,
-        category: "Skincare",
+        category: "Coming Soon",
         image: "https://plus.unsplash.com/premium_photo-1678216285963-253d94232eb7?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cXVlc3Rpb24lMjBtYXJrfGVufDB8fDB8fHww"
     },
     {
