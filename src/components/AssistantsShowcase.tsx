@@ -40,11 +40,11 @@ const products: Product[] = [
     {
         id: 4,
         brand: "NicheNeeds",
-        name: "Week 4: Coming Soon",
-        description: "Be the first to know when Week 4's problem solver is live.",
+        name: "Week 4: Narrate",
+        description: "Bring audience clarity to your raw thoughts. Strip the noise, keep your voice.",
         price: 75,
-        category: "Coming Soon",
-        image: "https://plus.unsplash.com/premium_photo-1678216285963-253d94232eb7?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cXVlc3Rpb24lMjBtYXJrfGVufDB8fDB8fHww"
+        category: "Clarity",
+        image: "/week4-hero.png"
     },
     {
         id: 5,

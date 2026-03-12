@@ -68,7 +68,7 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
         }
     };
 
-    if (selectedWeek !== 1 && selectedWeek !== 2 && selectedWeek !== 3 && selectedWeek !== 4) {
+    if (selectedWeek < 1 || selectedWeek > 15) {
         return null;
     }
 
@@ -94,8 +94,10 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                                     <>Amsterdam's Best Gigs.<span className="font-['Playfair_Display',sans-serif] italic"> Already In Your Calendar.</span></>
                                 ) : isWeek3 ? (
                                     <>Dutch Rental Law. <span className="font-['Playfair_Display',sans-serif] italic">In Your Language.</span></>
+                                ) : isWeek4 ? (
+                                    <>Raw Thoughts. <span className="font-['Playfair_Display',sans-serif] italic">Audience Clarity.</span></>
                                 ) : (
-                                    <>What is Week 4's <span className="font-['Playfair_Display',sans-serif] italic">Problem?</span></>
+                                    <>Week {selectedWeek}'s <span className="font-['Playfair_Display',sans-serif] italic">Problem.</span></>
                                 )}
                             </h2>
                         </div>
@@ -107,8 +109,10 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                                 "The best Amsterdam gigs added to your calendar in one click."
                             ) : isWeek3 ? (
                                 "Turn landlord disputes into drafted emails."
+                            ) : isWeek4 ? (
+                                "Strip the noise. Keep your voice intact. Narrate extracts the message buried under filler."
                             ) : (
-                                "Be the first to know when Week 4 is live."
+                                "Be the first to know when Week {selectedWeek} is live."
                             )}
                         </p>
 
@@ -141,7 +145,7 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                                             ) : (
                                                 <>
                                                     <span className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-base sm:text-sm whitespace-nowrap">
-                                                        {isWeek4 ? "Get notified" : "Send me access"}
+                                                        Send me access
                                                     </span>
                                                     <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5" />
                                                 </>
@@ -176,18 +180,16 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                         </div>
                     </div>
 
-                    {/* Video Player Section */}
+                    {/* Hero Image Section */}
                     {isWeek1 ? (
                         <div className="relative group">
-                            <div className="   w-full  overflow-hidden relative">
+                            <div className="w-full overflow-hidden relative">
                                 <img
                                     src="/week1-hero.png"
-                                    alt="Studio Pass Hero"
+                                    alt="Magic Edit Hero"
                                     className="w-full h-auto block"
                                 />
                             </div>
-
-                            {/* Shadow/Glow effect */}
                             <div className="absolute -inset-4 bg-[#ff3385]/5 blur-3xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
                     ) : isWeek2 ? (
@@ -199,8 +201,6 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                                     className="w-full h-auto block"
                                 />
                             </div>
-
-                            {/* Shadow/Glow effect */}
                             <div className="absolute -inset-4 bg-[#ff3385]/5 blur-3xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
                     ) : isWeek3 ? (
@@ -212,8 +212,17 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                                     className="w-full h-auto block"
                                 />
                             </div>
-
-                            {/* Shadow/Glow effect */}
+                            <div className="absolute -inset-4 bg-[#ff3385]/5 blur-3xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </div>
+                    ) : isWeek4 ? (
+                        <div className="relative group">
+                            <div className="w-full overflow-hidden relative">
+                                <img
+                                    src="/week4-hero.png"
+                                    alt="Narrate Hero"
+                                    className="w-full h-auto block"
+                                />
+                            </div>
                             <div className="absolute -inset-4 bg-[#ff3385]/5 blur-3xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
                     ) : (
@@ -223,7 +232,7 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                                     <div className="w-16 h-16 bg-[#ff3385]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                                         <span className="text-2xl font-['Playfair_Display',sans-serif] italic text-[#ff3385]">?</span>
                                     </div>
-                                    <p className="font-['Plus_Jakarta_Sans',sans-serif] text-gray-400 font-medium tracking-wide text-sm">WEEK 4 COMING SOON</p>
+                                    <p className="font-['Plus_Jakarta_Sans',sans-serif] text-gray-400 font-medium tracking-wide text-sm">WEEK {selectedWeek} COMING SOON</p>
                                 </div>
                             </div>
                         </div>
