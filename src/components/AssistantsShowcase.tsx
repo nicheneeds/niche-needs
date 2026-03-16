@@ -48,12 +48,12 @@ const products: Product[] = [
     },
     {
         id: 5,
-        brand: "Estée Lauder",
-        name: "Week 5",
-        description: "",
+        brand: "NicheNeeds",
+        name: "Week 5: Coming Soon",
+        description: "Something big is coming. Follow me on LinkedIn to see what I'm building next.",
         price: 75,
-        category: "Skincare",
-        image: "https://plus.unsplash.com/premium_photo-1678216285963-253d94232eb7?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cXVlc3Rpb24lMjBtYXJrfGVufDB8fDB8fHww"
+        category: "Coming Soon",
+        image: "/coming-soon.png"
     },
     {
         id: 6,

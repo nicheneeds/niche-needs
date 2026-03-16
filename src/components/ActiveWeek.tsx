@@ -76,6 +76,7 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
     const isWeek2 = selectedWeek === 2;
     const isWeek3 = selectedWeek === 3;
     const isWeek4 = selectedWeek === 4;
+    const isWeek5 = selectedWeek === 5;
 
     return (
         <section className="w-full bg-[#F9F9F3] pt-0 pb-20 px-6 md:px-12 lg:px-20 lg:pt-0 lg:pb-20 overflow-hidden">
@@ -96,6 +97,8 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                                     <>Dutch Rental Law. <span className="font-['Playfair_Display',sans-serif] italic">In Your Language.</span></>
                                 ) : isWeek4 ? (
                                     <>Raw Thoughts. <span className="font-['Playfair_Display',sans-serif] italic">Audience Clarity.</span></>
+                                ) : isWeek5 ? (
+                                    <>Week 5 <span className="font-['Playfair_Display',sans-serif] italic">Coming Soon.</span></>
                                 ) : (
                                     <>Week {selectedWeek}'s <span className="font-['Playfair_Display',sans-serif] italic">Problem.</span></>
                                 )}
@@ -111,6 +114,8 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                                 "Turn landlord disputes into drafted emails."
                             ) : isWeek4 ? (
                                 "Strip the noise. Keep your voice intact. Narrate extracts the message buried under filler."
+                            ) : isWeek5 ? (
+                                "Something big is coming. Follow me on LinkedIn to see what I'm building next."
                             ) : (
                                 "Be the first to know when Week {selectedWeek} is live."
                             )}
@@ -224,6 +229,29 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                                 />
                             </div>
                             <div className="absolute -inset-4 bg-[#ff3385]/5 blur-3xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </div>
+                    ) : isWeek5 ? (
+                        <div className="relative group">
+                            <a 
+                                href="https://linkedin.com/in/avasishta" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="w-full block overflow-hidden relative cursor-pointer"
+                            >
+                                <img
+                                    src="/coming-soon.png"
+                                    alt="Week 5 Coming Soon"
+                                    className="w-full h-auto block transition-transform duration-500 group-hover:scale-[1.02]"
+                                />
+                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-center justify-center">
+                                    <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+                                        <p className="text-[#2e2e2e] font-['Plus_Jakarta_Sans',sans-serif] text-sm font-bold flex items-center gap-2">
+                                            Follow on LinkedIn <ArrowRight className="w-4 h-4" />
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <div className="absolute -inset-4 bg-[#ff3385]/10 blur-3xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
                     ) : (
                         <div className="relative group">
