@@ -16,7 +16,7 @@ export function ChallengeSection({ selectedWeek, onSelectWeek }: ChallengeSectio
         { id: 2, title: "WhatsOn", available: true },
         { id: 3, title: "WoonWijs", available: true },
         { id: 4, title: "Narrate", available: true },
-        { id: 5, title: "Coming Soon", available: true },
+        { id: 5, title: "?", available: true },
         { id: 6, title: "?", available: false },
         { id: 7, title: "?", available: false },
         { id: 8, title: "?", available: false },
@@ -88,7 +88,7 @@ export function ChallengeSection({ selectedWeek, onSelectWeek }: ChallengeSectio
                 {/* Scrollable Container */}
                 <div className="mb-6">
                     <h2 className={`font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm ${isDarkMode ? "text-white" : "text-[#2e2e2e]/60"}`}>
-                        New Niche Problem Solved Every Week
+                        Shipping Weekly & Creating A Structure To Validate Ideas
                     </h2>
                 </div>
                 <div

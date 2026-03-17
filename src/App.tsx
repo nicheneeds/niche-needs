@@ -32,7 +32,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-[#ece6e8]">
+      <div className="min-h-screen bg-black">
         <SEO />
         <Header />
         <Routes>
