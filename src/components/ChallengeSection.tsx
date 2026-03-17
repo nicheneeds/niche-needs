@@ -88,7 +88,7 @@ export function ChallengeSection({ selectedWeek, onSelectWeek }: ChallengeSectio
                 {/* Scrollable Container */}
                 <div className="mb-6">
                     <h2 className={`font-['Plus_Jakarta_Sans',sans-serif] font-medium text-sm ${isDarkMode ? "text-white" : "text-[#2e2e2e]/60"}`}>
-                        Shipping Weekly & Creating A Structure To Validate Ideas
+                        Weekly shipping. Structured validation.
                     </h2>
                 </div>
                 <div
