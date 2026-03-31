@@ -5,7 +5,7 @@ interface ChallengeSectionProps {
     selectedWeek: number;
     onSelectWeek: (weekId: number) => void;
 }
-
+// this is where you set the week names
 export function ChallengeSection({ selectedWeek, onSelectWeek }: ChallengeSectionProps) {
     const isDarkMode = false; // Toggle this to false for light mode
     const usePinkActiveWeek = false; // Toggle this to true for #ff1f7a active week style

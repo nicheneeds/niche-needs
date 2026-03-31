@@ -98,7 +98,7 @@ export function ActiveWeek({ selectedWeek }: ActiveWeekProps) {
                                 ) : isWeek4 ? (
                                     <>Raw Thoughts. <span className="font-['Playfair_Display',sans-serif] italic">Audience Clarity.</span></>
                                 ) : isWeek5 ? (
-                                    <>Week 5 <span className="font-['Playfair_Display',sans-serif] italic">Coming Soon.</span></>
+                                    <><span className="font-['Playfair_Display',sans-serif] italic">Coming Soon.</span></>
                                 ) : (
                                     <>Week {selectedWeek}'s <span className="font-['Playfair_Display',sans-serif] italic">Problem.</span></>
                                 )}
