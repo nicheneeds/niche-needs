@@ -9,7 +9,8 @@ import { RefundsPage } from "./components/RefundsPage";
 import { PrivacyPage } from "./components/PrivacyPage";
 import { UploadPage } from "./components/UploadPage";
 import { WoonWijsPage } from "./components/WoonWijsPage";
-import { FeedbackWidget } from "./components/FeedbackWidget";
+import { SecretPage } from "./components/SecretPage";
+
 import { SEO } from "./components/SEO";
 
 import { usePostHog } from "@posthog/react";
@@ -28,27 +29,37 @@ function ScrollToTop() {
   return null;
 }
 
+function AppContent() {
+  const { pathname } = useLocation();
+  const isSecretPage = pathname === "/xyz";
+
+  return (
+    <div className={`min-h-screen ${isSecretPage ? "bg-[#F9F9F3]" : "bg-[#E9E4E4]"} antialiased`}>
+      <SEO />
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/xyz" element={<SecretPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/upload" element={<UploadPage />} />
+        <Route path="/woonwijs" element={<WoonWijsPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/refunds" element={<RefundsPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/assistants" element={<AssistantsPage />} />
+        {/* Fallback to home */}
+        <Route path="*" element={<HomePage />} />
+      </Routes>
+
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-black">
-        <SEO />
-        <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/upload" element={<UploadPage />} />
-          <Route path="/woonwijs" element={<WoonWijsPage />} />
-          <Route path="/terms" element={<TermsPage />} />
-          <Route path="/refunds" element={<RefundsPage />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
-          <Route path="/assistants" element={<AssistantsPage />} />
-          {/* Fallback to home */}
-          <Route path="*" element={<HomePage />} />
-        </Routes>
-        <FeedbackWidget />
-      </div>
+      <AppContent />
     </BrowserRouter>
   );
 }

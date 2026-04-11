@@ -1,18 +1,18 @@
-import { useState } from "react";
-import { ChallengeSection } from "./ChallengeSection";
-import { ActiveWeek } from "./ActiveWeek";
+import { HomeHero } from "./HomeHero";
+import { ProjectShowcase } from "./ProjectShowcase";
+import { HomeSummary } from "./HomeSummary";
 import { Footer } from "./Footer";
+import { projects } from "../data/projects";
 
 export function HomePage() {
-    const [selectedWeek, setSelectedWeek] = useState(5);
-
     return (
-        <>
+        <div className="bg-[#E9E4E4] min-h-screen">
             <main>
-                <ChallengeSection selectedWeek={selectedWeek} onSelectWeek={setSelectedWeek} />
-                <ActiveWeek selectedWeek={selectedWeek} />
+                <HomeHero />
+                <ProjectShowcase projects={projects} />
+                <HomeSummary />
             </main>
             <Footer />
-        </>
+        </div>
     );
 }

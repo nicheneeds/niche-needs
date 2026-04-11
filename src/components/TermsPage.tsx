@@ -3,7 +3,7 @@ import { Footer } from "./Footer";
 export function TermsPage() {
     return (
         <>
-            <main className="w-full bg-[#faf9fc] px-6 py-16 md:py-24 md:px-12 lg:px-20">
+            <main className="w-full px-6 py-16 md:py-24 md:px-12 lg:px-20">
                 <div className="max-w-[1000px] mx-auto">
                     <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-3xl md:text-4xl lg:text-5xl mb-12">
                         Terms & <span className="font-['Playfair_Display',sans-serif] italic font-normal">Conditions</span>

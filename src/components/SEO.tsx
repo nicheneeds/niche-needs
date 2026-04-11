@@ -6,6 +6,7 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: string;
+  noindex?: boolean;
 }
 
 export function SEO({
@@ -13,7 +14,8 @@ export function SEO({
   description = "Launched in 2025, NicheNeeds is a creative lab blending 15+ years of product design experience with the speed of agentic AI.",
   image,
   url,
-  type = 'website'
+  type = 'website',
+  noindex = false
 }: SEOProps) {
 
   useEffect(() => {
@@ -151,14 +153,30 @@ export function SEO({
       document.head.appendChild(script);
     };
 
+    // Set robots meta tag for noindex
+    const setRobotsTag = () => {
+      let robots = document.querySelector('meta[name="robots"]');
+      if (noindex) {
+        if (!robots) {
+          robots = document.createElement('meta');
+          robots.setAttribute('name', 'robots');
+          document.head.appendChild(robots);
+        }
+        robots.setAttribute('content', 'noindex, nofollow');
+      } else if (robots) {
+        robots.remove();
+      }
+    };
+
     // Execute all SEO improvements
     setMetaDescription();
     setCanonical();
     setOpenGraphTags();
     setTwitterTags();
     setStructuredData();
+    setRobotsTag();
 
-  }, [title, description, image, url, type]);
+  }, [title, description, image, url, type, noindex]);
 
   return null;
 }

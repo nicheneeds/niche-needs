@@ -49,7 +49,7 @@ export function Footer() {
 
           {/* Heading */}
           <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-white text-3xl md:text-3xl lg:text-3xl leading-tight mb-0">
-            15 Yrs UX. 15 Weeks. 15 MVPs.
+            Building at the intersection of taste and speed.
             {/* <span className="font-['Playfair_Display',sans-serif] italic">
               15 Weeks
             </span> */}
@@ -87,7 +87,7 @@ export function Footer() {
             KVK: 89911431
           </p>
           <a
-            href="https://instagram.com/nicheneeds.ai"
+            href="https://instagram.com/alok.builds"
             target="_blank"
             rel="noopener noreferrer"
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer flex items-center gap-2"
@@ -96,29 +96,29 @@ export function Footer() {
             Instagram
           </a>
           <a
-            href="https://instagram.com/nicheneeds.ai"
+            href="https://instagram.com/alok.builds"
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer flex items-center gap-2"
           >
             Contact Us
           </a>
-          <Link
+          {/* <Link
             to="/about"
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer"
           >
             About
-          </Link>
+          </Link> */}
           <Link
             to="/terms"
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer"
           >
             Terms
           </Link>
-          <Link
+          {/* <Link
             to="/refunds"
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer"
           >
             Refunds
-          </Link>
+          </Link> */}
           <Link
             to="/privacy"
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer"
