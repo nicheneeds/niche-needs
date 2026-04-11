@@ -10,7 +10,7 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: "stealth",
-        title: "Collaborative Stealth Project",
+        title: "Stealth Project",
         description: "Details coming soon....",
         buttonText: "Request Info",
         buttonLink: "mailto:hello@nicheneeds.com?subject=I want to know about the stealth startup",
@@ -26,9 +26,9 @@ export const projects: Project[] = [
     },
     {
         id: "ai-build",
-        title: "Let's Build An AI Project In 2 Hours",
-        description: "Skip the tutorials. We'll meet up and build your first project together.",
-        buttonText: "Request Session",
+        title: "Build Your First AI Project In 2 Hours",
+        description: "Skip the tutorials. We’ll build a working project together in a live session.",
+        buttonText: "Start Building",
         buttonLink: "mailto:hello@nicheneeds.com?subject=I want to build an AI project",
         image: "/showcase-3.png"
     },
@@ -36,7 +36,7 @@ export const projects: Project[] = [
         id: "automate",
         title: "Automate Your Business",
         description: "We'll streamline your most frustrating workflows and save you hours weekly.",
-        buttonText: "Request Free Audit",
+        buttonText: "Get Your Free Audit",
         buttonLink: "mailto:hello@nicheneeds.com?subject=I want to automate my business",
         image: "/showcase-4.png"
     }

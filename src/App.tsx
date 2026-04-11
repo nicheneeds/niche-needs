@@ -34,7 +34,7 @@ function AppContent() {
   const isSecretPage = pathname === "/xyz";
 
   return (
-    <div className={`min-h-screen ${isSecretPage ? "bg-[#F9F9F3]" : "bg-[#E9E4E4]"} antialiased`}>
+    <div className={`min-h-screen ${isSecretPage ? "bg-[#F9F9F3]" : "bg-[#f0eee6]"} antialiased`}>
       <SEO />
       <Header />
       <Routes>

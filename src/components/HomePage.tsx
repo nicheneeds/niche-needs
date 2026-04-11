@@ -6,7 +6,8 @@ import { projects } from "../data/projects";
 
 export function HomePage() {
     return (
-        <div className="bg-[#E9E4E4] min-h-screen">
+        <div className="bg-[#f0eee6] min-h-screen">
+            {/* <div className="bg-[#E9E4E4] min-h-screen"> */}
             <main>
                 <HomeHero />
                 <ProjectShowcase projects={projects} />

@@ -56,7 +56,7 @@ export function Header() {
 
   // Fallback to centered header for everything else (including homepage)
   return (
-    <header className={`w-full ${isDarkMode ? "bg-[#000]" : "bg-[#E9E4E4]"} px-6 py-8 md:px-12 lg:px-20`}>
+    <header className={`w-full ${isDarkMode ? "bg-[#000]" : "bg-[#f0eee6]"} px-6 py-8 md:px-12 lg:px-20`}>
       <div className="max-w-[1000px] mx-auto flex justify-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 hover:opacity-70 transition-opacity cursor-pointer">
