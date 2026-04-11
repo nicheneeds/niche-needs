@@ -42,7 +42,7 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
 
                             <a
                                 href={project.buttonLink} target="_blank"
-                                className="bg-[#2e2e2e] hover:bg-[#2e2e2e] text-white font-['Plus_Jakarta_Sans',sans-serif] font-medium py-4 px-10 rounded-full  hover:opacity-90 active:opacity-80 shadow-lg shadow-black-500/20 flex items-center justify-center gap-2 text-lg w-full sm:w-fit cursor-pointer"
+                                className="bg-[#2e2e2e] hover:bg-[#2e2e2e] text-white font-['Plus_Jakarta_Sans',sans-serif] font-medium py-4 px-10 rounded-full  hover:opacity-90 active:opacity-80 shadow-lg shadow-black-500/20 flex items-center justify-center gap-2 text-lg w-full sm:w-fit cursor-pointer select-none outline-none"
                             >
                                 {/* <a
                                 href={project.buttonLink} target="_blank"
