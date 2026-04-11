@@ -48,7 +48,7 @@ export function Footer() {
           </div>
 
           {/* Heading */}
-          <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-white text-3xl md:text-3xl lg:text-3xl leading-tight mb-0">
+          <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-white text-3xl md:text-3xl lg:text-3xl leading-tight pr-20 mb-0">
             Building at the intersection of taste and speed.
             {/* <span className="font-['Playfair_Display',sans-serif] italic">
               15 Weeks
@@ -80,10 +80,10 @@ export function Footer() {
 
         {/* Footer Links - Full Width Section */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-start sm:items-center border-t border-white/10 pt-8">
-          <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-white text-sm tracking-[0.28px]">
+          <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px]">
             Based in Amsterdam, NL
           </p>
-          <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-white text-sm tracking-[0.28px]">
+          <p className="font-['Plus_Jakarta_Sans',sans-serif] text-[#878787] font-medium text-sm tracking-[0.28px]">
             KVK: 89911431
           </p>
           <a
