@@ -24,7 +24,8 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
                                 <img
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover pointer-events-none"
+                                    draggable={false}
                                 />
                             </div>
                         </div>
