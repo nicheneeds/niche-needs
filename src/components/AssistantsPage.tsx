@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SEO } from "./SEO";
 
 interface Product {
   id: number;
@@ -198,6 +199,7 @@ export function AssistantsPage() {
 
   return (
     <div className="w-full bg-[rgb(236,230,232)]">
+      <SEO title="AI Assistants - NicheNeeds" />
       <div className="max-w-[1200px] mx-auto px-6 py-12 md:px-12 lg:px-0">
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Sidebar Filters */}
