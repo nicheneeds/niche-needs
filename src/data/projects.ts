@@ -11,7 +11,7 @@ export const projects: Project[] = [
     {
         id: "stealth",
         title: "Unnamed Project",
-        description: "A collaboration between brothers. Stay tuned.",
+        description: "A collaboration between two brothers. Stay tuned.",
         buttonText: "Get Updates",
         buttonLink: "https://www.instagram.com/alok.builds",
         image: "/showcase-1.png"
