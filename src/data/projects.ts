@@ -10,10 +10,10 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: "stealth",
-        title: "Stealth Project",
-        description: "Details coming soon....",
-        buttonText: "Request Info",
-        buttonLink: "mailto:hello@nicheneeds.com?subject=I want to know about the stealth startup",
+        title: "Unnamed Stealth Project",
+        description: "Collab between two complementary minds. More info coming soon...",
+        buttonText: "Get Updates",
+        buttonLink: "https://www.instagram.com/alok.builds",
         image: "/showcase-1.png"
     },
     {
