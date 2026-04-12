@@ -96,7 +96,7 @@ export function Footer() {
             Instagram
           </a>
           <a
-            href="https://instagram.com/alok.builds"
+            href="mailto:hello@nicheneeds.com?subject=I have a question"
             className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer flex items-center gap-2"
           >
             Contact Us
