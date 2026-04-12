@@ -7,7 +7,7 @@ interface ProjectShowcaseProps {
 export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
     return (
         <section className="w-full px-6 md:px-12 lg:px-20">
-            <h3 className="font-['Plus_Jakarta_Sans',sans-serif] text-4xl md:text-2xl lg:text-4xl text-[#2e2e2e] leading-[1.1] pb-10 text-center">
+            <h3 className="font-['Plus_Jakarta_Sans',sans-serif] text-4xl md:text-4xl lg:text-4xl text-[#2e2e2e] leading-[1.1] pb-10 text-center">
                 ↡
             </h3>
             <div className="max-w-[800px] mx-auto flex flex-col gap-24 md:gap-32">

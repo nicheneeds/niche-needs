@@ -2,7 +2,7 @@ export function HomeSummary() {
     return (
         <section className="w-full py-24 px-6 md:px-12 lg:px-20 text-center">
             <div className="max-w-[800px] mx-auto space-y-12 flex flex-col items-center">
-                <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-5xl md:text-3xl lg:text-5xl text-[#2e2e2e] leading-[1.15] tracking-tight mb-[5px]">
+                <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-5xl md:text-5xl lg:text-5xl text-[#2e2e2e] leading-[1.15] tracking-tight mb-[5px]">
                     <span style={{ fontVariantEmoji: 'text' }}>✌︎</span>
                 </h2>
                 <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-2xl md:text-3xl lg:text-3xl text-[#2e2e2e] leading-[1.15] tracking-tight">
