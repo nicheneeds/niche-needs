@@ -6,10 +6,10 @@ interface ProjectShowcaseProps {
 
 export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
     return (
-        <section className="w-full py-12 px-6 md:px-12 lg:px-20">
-            {/* <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-2xl md:text-2xl lg:text-2xl text-[#2e2e2e] leading-[1.1] text-center">
-                What We're Up To:
-            </h3> */}
+        <section className="w-full py-5 px-6 md:px-12 lg:px-20">
+            <h3 className="font-['Plus_Jakarta_Sans',sans-serif] text-4xl md:text-2xl lg:text-4xl text-[#2e2e2e] leading-[1.1] pb-10 text-center">
+                ↡
+            </h3>
             <div className="max-w-[800px] mx-auto flex flex-col gap-24 md:gap-32">
 
                 {projects.map((project, index) => (

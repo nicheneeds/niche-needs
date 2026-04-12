@@ -10,8 +10,8 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: "stealth",
-        title: "Unnamed Stealth Project",
-        description: "A collab between two complementary minds. More info coming soon...",
+        title: "Unnamed Project",
+        description: "A collaboration between brothers. Stay tuned.",
         buttonText: "Get Updates",
         buttonLink: "https://www.instagram.com/alok.builds",
         image: "/showcase-1.png"
