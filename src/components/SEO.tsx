@@ -10,8 +10,8 @@ interface SEOProps {
 }
 
 export function SEO({
-  title = "NicheNeeds - Amsterdam AI Creative Lab",
-  description = "Launched in 2025, NicheNeeds is a creative lab blending 15+ years of product design experience with the speed of agentic AI.",
+  title = "NicheNeeds - Amsterdam Creative Studio",
+  description = "Launched in 2025, NicheNeeds is a creative lab blending 15+ years of product design experience with the speed of AI.",
   image,
   url,
   type = 'website',
