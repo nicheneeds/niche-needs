@@ -26,17 +26,18 @@ export const projects: Project[] = [
     },
     {
         id: "ai-build",
-        title: "Build Your First AI Project In 2 Hours",
-        description: "Skip the tutorials. We’ll build a working project together in a live session.",
+        title: "Your 2-Hour AI Challenge",
+        // title: "Build Your First AI Project In 2 Hours",
+        description: "Skip the tutorials. We’ll build a working project together in person at a cafe.",
         buttonText: "Start Building",
         buttonLink: "mailto:hello@nicheneeds.com?subject=I want to build an AI project",
         image: "/showcase-3.png"
     },
     {
         id: "automate",
-        title: "Automate Your Business",
-        description: "We'll streamline your most frustrating workflows and save you hours weekly.",
-        buttonText: "Get Your Free Audit",
+        title: "Bespoke Business Automation",
+        description: "We'll automate your most frustrating workflows and save you hours weekly.",
+        buttonText: "Request Your Free Audit",
         buttonLink: "mailto:hello@nicheneeds.com?subject=I want to automate my business",
         image: "/showcase-4.png"
     }

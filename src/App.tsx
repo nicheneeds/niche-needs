@@ -14,7 +14,13 @@ function ScrollToTop() {
   const posthog = usePostHog();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+    document.documentElement.scrollTo(0, 0);
+
     if (posthog) {
       posthog.capture("$pageview");
     }

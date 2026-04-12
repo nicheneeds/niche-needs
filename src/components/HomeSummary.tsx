@@ -6,7 +6,7 @@ export function HomeSummary() {
                     About Us
                 </h2>
                 <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-lg md:text-xl leading-relaxed text-center px-2 md:px-20 lg:px-20 mt-[-30px]">
-                    First launched in 2025, NicheNeeds is run entirely by Alok, 15 Yr UXer (Ex-Booking.com, R/GA and Rokkan). NicheNeeds works with a curated roster of folks at any given time.
+                    First launched in 2025, NicheNeeds is run entirely by Alok, 15 Yr UXer (Ex-Booking.com, R/GA and Rokkan).
                 </p>
 
                 <a

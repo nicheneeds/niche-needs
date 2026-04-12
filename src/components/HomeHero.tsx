@@ -10,9 +10,9 @@ export function HomeHero() {
                     in Amsterdam.
                 </h2> */}
                 <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-3xl md:text-4xl lg:text-4xl text-[#2e2e2e] leading-[1.15] px-0 md:px-25 lg:px-20 tracking-[-0.5px]">
-                    A creative studio building{" "}
+                    A creative studio{" "}
                     <span className="font-['Playfair_Display',sans-serif] italic">
-                        magic
+                        building magic
                     </span>{" "}
                     in Amsterdam.
                 </h2>
