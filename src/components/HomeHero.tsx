@@ -1,6 +1,6 @@
 export function HomeHero() {
     return (
-        <section className="w-full pt-12 pb-10 px-6 md:px-12 lg:px-20 text-center">
+        <section className="w-full pt-12 pb-5 px-6 md:px-12 lg:px-20 text-center">
             <div className="max-w-[700px] mx-auto">
                 {/* <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-3xl md:text-5xl lg:text-4xl text-[#2e2e2e] leading-[1.15] px-10 tracking-tight">
                     NicheNeeds is a creative studio crafting{" "}
