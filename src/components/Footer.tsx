@@ -16,6 +16,8 @@ export function Footer() {
               <div className="w-5 h-5">
                 <svg
                   className="w-full h-full"
+                  width="22"
+                  height="12"
                   fill="none"
                   viewBox="0 0 22 12"
                 >
@@ -30,6 +32,8 @@ export function Footer() {
               <div className="w-5 h-5 ml-1">
                 <svg
                   className="w-full h-full"
+                  width="22"
+                  height="12"
                   fill="none"
                   viewBox="0 0 22 12"
                 >

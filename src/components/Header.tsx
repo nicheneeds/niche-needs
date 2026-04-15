@@ -13,7 +13,7 @@ export function Header() {
           <Link to="/" className="flex items-center gap-2 hover:opacity-70 transition-opacity cursor-pointer">
             <div className="flex">
               <div className="w-5 h-5">
-                <svg className="w-full h-full" fill="none" viewBox="0 0 22 12">
+                <svg className="w-full h-full" width="22" height="12" fill="none" viewBox="0 0 22 12">
                   <path
                     d="M20.3229 9.88135C18.9334 -1.15029 2.92562 -1.1587 1.60459 9.88135"
                     stroke={isDarkMode ? "white" : "#2e2e2e"}
@@ -23,7 +23,7 @@ export function Header() {
                 </svg>
               </div>
               <div className="w-5 h-5 ml-1">
-                <svg className="w-full h-full" fill="none" viewBox="0 0 22 12">
+                <svg className="w-full h-full" width="22" height="12" fill="none" viewBox="0 0 22 12">
                   <path
                     d="M20.3229 9.88135C18.9334 -1.15029 2.92562 -1.1587 1.60459 9.88135"
                     stroke={isDarkMode ? "white" : "#2e2e2e"}
@@ -62,7 +62,7 @@ export function Header() {
         <Link to="/" className="flex items-center gap-2 hover:opacity-70 transition-opacity cursor-pointer">
           <div className="flex">
             <div className="w-5 h-5">
-              <svg className="w-full h-full" fill="none" viewBox="0 0 22 12">
+              <svg className="w-full h-full" width="22" height="12" fill="none" viewBox="0 0 22 12">
                 <path
                   d="M20.3229 9.88135C18.9334 -1.15029 2.92562 -1.1587 1.60459 9.88135"
                   stroke={isDarkMode ? "white" : "#2e2e2e"}
@@ -72,7 +72,7 @@ export function Header() {
               </svg>
             </div>
             <div className="w-5 h-5 ml-1">
-              <svg className="w-full h-full" fill="none" viewBox="0 0 22 12">
+              <svg className="w-full h-full" width="22" height="12" fill="none" viewBox="0 0 22 12">
                 <path
                   d="M20.3229 9.88135C18.9334 -1.15029 2.92562 -1.1587 1.60459 9.88135"
                   stroke={isDarkMode ? "white" : "#2e2e2e"}

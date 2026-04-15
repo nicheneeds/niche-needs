@@ -36,7 +36,7 @@ export const projects: Project[] = [
     {
         id: "automate",
         title: "Bespoke Business Automation",
-        description: "We'll automate your most frustrating workflows and save you hours weekly.",
+        description: "We'll streamline your most frustrating workflows and save you hours weekly.",
         buttonText: "Request Your Free Audit",
         buttonLink: "mailto:hello@nicheneeds.com?subject=I want to automate my business",
         image: "/showcase-4.png"
