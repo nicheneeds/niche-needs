@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import { HomePage } from "./components/HomePage";
 import { TermsPage } from "./components/TermsPage";
 import { PrivacyPage } from "./components/PrivacyPage";
+import { UploadPage } from "./components/UploadPage";
 
 import { SEO } from "./components/SEO";
 
@@ -30,14 +31,18 @@ function ScrollToTop() {
 }
 
 function AppContent() {
+  const { pathname } = useLocation();
+  const isUploadPage = pathname === "/upload";
+
   return (
     <div className="min-h-screen bg-[#f0eee6] antialiased">
       <SEO />
-      <Header />
+      {!isUploadPage && <Header />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/upload" element={<UploadPage />} />
         {/* Fallback to home */}
         <Route path="*" element={<HomePage />} />
       </Routes>
