@@ -30,9 +30,9 @@ export const projects: Project[] = [
     */
     {
         id: "ai-build",
-        title: "Beginner AI Bootcamp",
+        title: "Two Hour AI Bootcamp",
         // title: "Build Your First AI Project In 2 Hours",
-        description: "Skip the tutorials. We'll build a useful workflow for you together.",
+        description: "Skip the tutorials. We'll build a useful workflow together.",
         buttonText: "Start Building",
         buttonLink: "mailto:hello@nicheneeds.com?subject=I want to build an AI project",
         image: "/showcase-3.png"

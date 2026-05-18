@@ -15,7 +15,7 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
                 {projects.map((project, index) => {
                     if (project.video) {
                         return (
-                            <div key={project.id} className="w-full max-w-[900px] mx-auto flex flex-col items-center gap-10">
+                            <div key={project.id} className="w-full max-w-[900px] mx-auto flex flex-col items-center gap-8">
                                 <div className="w-full rounded-[20px] overflow-hidden">
                                     <video
                                         src={project.video}
