@@ -13,10 +13,10 @@ export function HomeSummary() {
                 </p>
 
                 <a
-                    href="mailto:hello@nicheneeds.com?subject=Hello"
+                    href="mailto:hello@nicheneeds.com?subject=Intro from your site"
                     className="bg-[#2e2e2e] hover:bg-[#2e2e2e] text-white font-['Plus_Jakarta_Sans',sans-serif] font-medium py-4 px-10 rounded-full hover:opacity-90 active:opacity-80 shadow-lg shadow-black-500/20 flex items-center justify-center gap-2 text-lg w-full sm:w-fit cursor-pointer mt-[-20px] outline-none"
                 >
-                    Get In Touch
+                    Email Alok
                 </a>
 
                 {/* Amsterdam Canal Houses Image */}

@@ -5,16 +5,18 @@ export interface Project {
     buttonText: string;
     buttonLink: string;
     image: string;
+    video?: string;
 }
 
 export const projects: Project[] = [
     {
         id: "cluster-cluck",
-        title: "Cluster Cluck (Beta)",
-        description: "Challenge your friends to a chaotic cross to the other side.",
-        buttonText: "Play Game",
+        title: "Cluster Cluck",
+        description: "Experience chaotic multiplayer chicken crossing.",
+        buttonText: "Play Now",
         buttonLink: "https://www.clustercluck.io",
-        image: "/showcase-2.png"
+        image: "/showcase-2.png",
+        video: "/cc.mp4"
     },
     /* 
     {
@@ -28,19 +30,19 @@ export const projects: Project[] = [
     */
     {
         id: "ai-build",
-        title: "The 2-Hour AI Challenge",
+        title: "Beginner AI Bootcamp",
         // title: "Build Your First AI Project In 2 Hours",
-        description: "Skip the tutorials. We'll build a working project together in-person at a cafe.",
+        description: "Skip the tutorials. We'll build a useful workflow for you together.",
         buttonText: "Start Building",
         buttonLink: "mailto:hello@nicheneeds.com?subject=I want to build an AI project",
         image: "/showcase-3.png"
     },
     {
         id: "automate",
-        title: "Custom Automation",
-        description: "Run a business? We'll save you hours weekly by automating your most frustrating workflows.",
-        buttonText: "Request Your Free Audit",
-        buttonLink: "mailto:hello@nicheneeds.com?subject=I want to automate my business",
+        title: "Senior UX Audit",
+        description: "Optimize your existing conversion funnel or product workflow.",
+        buttonText: "Get Audit",
+        buttonLink: "mailto:hello@nicheneeds.com?subject=I want a UX audit",
         image: "/showcase-4.png"
     }
 ];
