@@ -25,7 +25,12 @@ export function PrivacyPage() {
                         </section>
 
                         <section>
-                            <h2 className="text-xl mb-4 text-black">3. <span className="font-bold">GDPR Compliance</span></h2>
+                            <h2 className="text-xl mb-4 text-black">3. <span className="font-bold">Analytics</span></h2>
+                            <p>We use PostHog for basic site analytics in memory-only mode. This means no cookies are set, no data is stored on your device, and your session resets when you close the tab. We process IP addresses to count visits; we do not build profiles, identify individual users, or share analytics data with third parties. If your browser sends a "Do Not Track" or Global Privacy Control signal, analytics are disabled automatically.</p>
+                        </section>
+
+                        <section>
+                            <h2 className="text-xl mb-4 text-black">4. <span className="font-bold">GDPR Compliance</span></h2>
                             <p className="mb-4">As a studio based in Amsterdam, Netherlands, we comply with the General Data Protection Regulation (GDPR). You have the right to:</p>
                             <ul className="list-disc pl-6 space-y-2">
                                 <li>Access the data we hold about you.</li>
@@ -35,7 +40,7 @@ export function PrivacyPage() {
                         </section>
 
                         <section>
-                            <h2 className="text-xl mb-4 text-black">4. <span className="font-bold">Contact</span></h2>
+                            <h2 className="text-xl mb-4 text-black">5. <span className="font-bold">Contact</span></h2>
                             <p>For any privacy-related inquiries, please contact us at <strong>studionicheneeds@gmail.com</strong>.</p>
                         </section>
                     </div>

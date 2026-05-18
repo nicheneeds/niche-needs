@@ -81,8 +81,14 @@ export function Footer() {
 
         {/* Footer Links - Full Width Section */}
         <div className="w-full flex flex-col items-center gap-4 pt-2">
-          {/* Row 1: Links */}
+          {/* Row 1: Actions (Contact + Social) */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center justify-center">
+            <a
+              href="mailto:hello@nicheneeds.com?subject=I have a question"
+              className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer flex items-center gap-2"
+            >
+              Contact Us
+            </a>
             <a
               href="https://instagram.com/alok.builds"
               target="_blank"
@@ -92,12 +98,10 @@ export function Footer() {
               <Instagram className="w-4 h-4" strokeWidth={1.75} />
               Instagram
             </a>
-            <a
-              href="mailto:hello@nicheneeds.com?subject=I have a question"
-              className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer flex items-center gap-2"
-            >
-              Contact Us
-            </a>
+          </div>
+
+          {/* Row 2: Legal */}
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center justify-center">
             <Link
               to="/terms"
               className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px] hover:text-white transition-colors cursor-pointer"
@@ -112,7 +116,7 @@ export function Footer() {
             </Link>
           </div>
 
-          {/* Row 2: Location + KVK */}
+          {/* Row 3: Business meta */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 items-center justify-center">
             <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px]">
               Based in Amsterdam, NL
@@ -120,9 +124,12 @@ export function Footer() {
             <p className="font-['Plus_Jakarta_Sans',sans-serif] text-[#878787] font-medium text-sm tracking-[0.28px]">
               KVK: 89911431
             </p>
+            <p className="font-['Plus_Jakarta_Sans',sans-serif] text-[#878787] font-medium text-sm tracking-[0.28px]">
+              BTW: NL004772200B30
+            </p>
           </div>
 
-          {/* Row 3: Copyright */}
+          {/* Row 4: Copyright */}
           <p className="font-['Plus_Jakarta_Sans',sans-serif] font-medium text-[#878787] text-sm tracking-[0.28px]">
             Copyright © 2026 Studio Niche Needs
           </p>
