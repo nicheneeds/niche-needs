@@ -24,7 +24,6 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
                                         muted
                                         playsInline
                                         preload="auto"
-                                        poster="/cc-poster.jpg"
                                         className="w-full h-auto block pointer-events-none scale-125 origin-center -translate-y-[6%]"
                                     />
                                 </div>
