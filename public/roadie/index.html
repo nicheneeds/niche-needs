@@ -152,7 +152,7 @@
   .vid { display: block; width: 72px; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 12px; border: 1px solid #3a3a42; }
   .pair { display: flex; gap: 4px; max-width: none; }
   .pair .vid { width: auto; height: 88px; aspect-ratio: auto; }
-  .vid.done { width: 150px; aspect-ratio: 89 / 144; }
+  .vid.done { width: 150px; aspect-ratio: 9 / 16; }
   .ask { width: fit-content; max-width: 86%; margin: 8px 0; }
   .ask .msg { max-width: none; margin: 0 0 4px; }
   .tap {
@@ -177,6 +177,9 @@
     font-size: 13px; font-weight: 600;
     display: grid; place-items: center;
   }
+
+  .real { display: inline-block; margin: 24px 0 0 40px; color: var(--accent-soft); font-size: 15px; font-weight: 500; text-decoration: none; }
+  .real:hover { color: var(--text); }
 
   .join {
     min-height: 100vh;
@@ -260,8 +263,8 @@
       <div class="msg them">Morning. What's on your mind?</div>
       <div class="msg me clip pair"><img class="vid" src="/roadie/roadie-before.jpg" alt="A raw clip of someone talking to camera"><img class="vid" src="/roadie/roadie-game.jpg" alt="A raw gameplay recording"></div>
       <div class="ask"><div class="msg them">Got it. Add more, or tap Post.</div><div class="tap">Post</div></div>
-      <div class="msg them clip"><img class="vid done" src="/roadie/roadie-after.jpg" alt="Both clips cut into one subtitled video, ready to post"></div>
-      <div class="msg them">Posted. Discord too.</div>
+      <div class="msg them clip"><video class="vid done" src="/roadie/roadie-after.mp4" poster="/roadie/roadie-after.jpg" autoplay muted loop playsinline aria-label="Both clips cut into one subtitled video, ready to post"></video></div>
+      <div class="msg them">Posted.</div>
     </div>
 
     <div>
@@ -270,8 +273,9 @@
       <ol>
         <li><span class="n">1</span><span><b>Say it.</b> Text, voice, photo or video.</span></li>
         <li><span class="n">2</span><span><b>Roadie preps it.</b> Subtitles, a hook, your own words.</span></li>
-        <li><span class="n">3</span><span><b>It's out.</b> Posted to your socials and Discord.</span></li>
+        <li><span class="n">3</span><span><b>It's out.</b> Posted to your socials and community.</span></li>
       </ol>
+      <a class="real" href="https://www.youtube.com/shorts/JNECBTcj-qc" target="_blank" rel="noopener">See a real one →</a>
     </div>
   </div>
 </section>
