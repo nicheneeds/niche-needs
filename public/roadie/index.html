@@ -150,6 +150,8 @@
   .me { background: var(--accent); margin-left: auto; }
   .msg.clip { padding: 0; background: none; }
   .vid { display: block; width: 72px; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 12px; border: 1px solid #3a3a42; }
+  .pair { display: flex; gap: 4px; max-width: none; }
+  .pair .vid { width: auto; height: 88px; aspect-ratio: auto; }
   .vid.done { width: 150px; aspect-ratio: 89 / 144; }
   .ask { width: fit-content; max-width: 86%; margin: 8px 0; }
   .ask .msg { max-width: none; margin: 0 0 4px; }
@@ -256,9 +258,9 @@
         Getting your update out
       </div>
       <div class="msg them">Morning. What's on your mind?</div>
-      <div class="msg me clip"><img class="vid" src="/roadie/roadie-before.jpg" alt="A raw clip of someone talking to camera"></div>
+      <div class="msg me clip pair"><img class="vid" src="/roadie/roadie-before.jpg" alt="A raw clip of someone talking to camera"><img class="vid" src="/roadie/roadie-game.jpg" alt="A raw gameplay recording"></div>
       <div class="ask"><div class="msg them">Got it. Add more, or tap Post.</div><div class="tap">Post</div></div>
-      <div class="msg them clip"><img class="vid done" src="/roadie/roadie-after.jpg" alt="The same clip, subtitled and ready to post"></div>
+      <div class="msg them clip"><img class="vid done" src="/roadie/roadie-after.jpg" alt="Both clips cut into one subtitled video, ready to post"></div>
       <div class="msg them">Posted. Discord too.</div>
     </div>
 
