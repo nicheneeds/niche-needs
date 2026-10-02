@@ -152,6 +152,8 @@
   .vid { display: block; width: 72px; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 12px; border: 1px solid #3a3a42; }
   .pair { display: flex; gap: 4px; max-width: none; }
   .pair .vid { width: auto; height: 74px; aspect-ratio: auto; }
+  .raw { position: relative; display: block; }
+  .raw svg { position: absolute; left: 6px; bottom: 6px; width: 12px; height: 12px; filter: drop-shadow(0 0 2px rgba(0,0,0,.8)); }
   .vid.done { width: 150px; aspect-ratio: 9 / 16; }
   .ask { width: fit-content; max-width: 86%; margin: 8px 0; }
   .ask .msg { max-width: none; margin: 0 0 4px; }
@@ -237,7 +239,7 @@
 <main class="hero">
   <h1>Roadie <img class="face" src="/roadie/roadie-mark.webp" alt="the raccoon">, AI that<br>gets the word out <br class="m">for you 📣</h1>
 
-  <p class="pitch">For creatives who know they should post, and don't.</p>
+  <p class="pitch">For creatives who know they should post, but don't.</p>
 
   <form id="signup">
     <input id="email" type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email" required>
@@ -261,19 +263,19 @@
         Getting your update out
       </div>
       <div class="msg them">Morning. What's on your mind?</div>
-      <div class="msg me clip pair"><img class="vid" loading="lazy" src="/roadie/roadie-before.jpg" alt="A raw clip of someone talking to camera"><img class="vid" loading="lazy" src="/roadie/roadie-game.jpg" alt="A raw gameplay recording"></div>
+      <div class="msg me clip pair"><span class="raw"><img class="vid" loading="lazy" src="/roadie/roadie-before.jpg" alt="A raw clip of someone talking to camera"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3.5 1.8v10.4L12 7z" fill="#fff"/></svg></span><span class="raw"><img class="vid" loading="lazy" src="/roadie/roadie-game.jpg" alt="A raw gameplay recording"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3.5 1.8v10.4L12 7z" fill="#fff"/></svg></span></div>
       <div class="ask"><div class="msg them">Got it. Add more, or tap Post.</div><div class="tap">Post</div></div>
       <div class="msg them clip"><video class="vid done" src="/roadie/roadie-after.mp4" poster="/roadie/roadie-after.jpg" preload="none" muted loop playsinline aria-label="Both clips cut into one subtitled video, ready to post"></video></div>
-      <div class="msg them">Posted.</div>
+      <div class="msg them">Edited, subtitled, posted.</div>
     </div>
 
     <div>
       <h2>Every band has a manager. Now you do too.</h2>
-      <p>You make the work. Roadie handles the editing and posting.</p>
+      <p>You make the work. Roadie reminds you, edits it and posts it.</p>
       <ol>
-        <li><span class="n">1</span><span><b>Say it.</b> Text, voice, photo or video.</span></li>
-        <li><span class="n">2</span><span><b>Roadie preps it.</b> Subtitles, a hook, your own words.</span></li>
-        <li><span class="n">3</span><span><b>It's out.</b> Posted to your socials and community.</span></li>
+        <li><span class="n">1</span><span><b>Roadie asks.</b> Every morning: what's on your mind?</span></li>
+        <li><span class="n">2</span><span><b>You say it.</b> Text, voice, photo or video.</span></li>
+        <li><span class="n">3</span><span><b>Roadie edits and posts it.</b> Subtitles, a hook, your own words.</span></li>
       </ol>
       <a class="real" href="https://www.youtube.com/shorts/JNECBTcj-qc" target="_blank" rel="noopener">See a real one →</a>
     </div>
