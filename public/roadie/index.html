@@ -148,6 +148,26 @@
   }
   .them { background: #2f2f33; }
   .me { background: var(--accent); margin-left: auto; }
+  .msg.clip { padding: 5px; }
+  .vid {
+    width: 54px; aspect-ratio: 9 / 16; border-radius: 11px;
+    background: linear-gradient(160deg, #3a3f8f, #1d1d2a 60%, #40204f);
+    position: relative; display: grid; place-items: center;
+  }
+  .vid svg { width: 14px; height: 14px; opacity: 0.8; }
+  .vid.done { width: 104px; }
+  .vid.done svg { width: 22px; height: 22px; opacity: 0.55; }
+  .vid .sub {
+    position: absolute; left: 4px; right: 4px; bottom: 14%;
+    text-align: center; font-weight: 700; font-size: 11px; line-height: 1.2;
+    text-shadow: 0 0 3px #000, 0 0 3px #000, 0 1px 3px #000;
+  }
+  .tap {
+    width: fit-content; margin: 8px 0;
+    border: 1px solid var(--accent); color: var(--accent-soft);
+    border-radius: 10px; padding: 6px 20px;
+    font-size: 13px; font-weight: 600;
+  }
   h2 {
     font-size: clamp(28px, 6vw, 40px);
     font-weight: 500;
@@ -247,10 +267,10 @@
       </div>
       <div class="msg them">Morning. What's on your mind?</div>
       <div class="msg me">spent all day on the pause menu, finally works</div>
-      <div class="msg them">Got a photo or video?</div>
-      <div class="msg me">🎬 here's me showing it</div>
-      <div class="msg me">Post</div>
-      <div class="msg them">Subtitled and posted. Discord too.</div>
+      <div class="msg me clip"><div class="vid"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3.5 1.8v10.4L12 7z" fill="#fff"/></svg></div></div>
+      <div class="tap">Post ✓</div>
+      <div class="msg them clip"><div class="vid done"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3.5 1.8v10.4L12 7z" fill="#fff"/></svg><span class="sub">finally works</span></div></div>
+      <div class="msg them">Posted. Discord too.</div>
     </div>
 
     <div>
