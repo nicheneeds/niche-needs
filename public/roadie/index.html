@@ -38,7 +38,7 @@
     padding: 12px 20px;
   }
   .wordmark { font-weight: 600; font-size: 15px; letter-spacing: -0.01em; display: flex; align-items: center; gap: 7px; }
-  .wordmark img { height: 10px; }
+  .wordmark svg { width: 42px; height: 10px; }
 
   .hero {
     min-height: calc(100vh - 60px);
@@ -58,6 +58,7 @@
     letter-spacing: -0.02em;
     margin: 0;
   }
+  h1 .m { display: none; }
   h1 .face {
     width: 1.05em;
     height: 1.05em;
@@ -68,6 +69,7 @@
     color: var(--muted);
     font-size: 15px;
     margin: 60px 0 18px;
+    text-wrap: balance;
   }
   .cta {
     display: inline-block;
@@ -191,11 +193,12 @@
   .foot nav { display: flex; gap: 22px; }
   .foot .from { display: flex; justify-content: flex-end; align-items: center; gap: 8px; }
   .foot .from b { display: flex; align-items: center; gap: 6px; color: var(--text); font-weight: 600; font-size: 14px; }
-  .foot .from img { height: 9px; }
+  .foot .from svg { width: 38px; height: 9px; }
 
   @media (max-width: 720px) {
     .hero::before { flex: 0; }
-    h1 { margin-top: 40px; }
+    h1 { margin-top: 40px; font-size: clamp(32px, 9.5vw, 52px); }
+    h1 .m { display: inline; }
     .pitch { margin-top: 40px; }
     .more-inner { grid-template-columns: 1fr; gap: 36px; }
     .phone { max-width: 300px; margin: 0 auto; width: 100%; }
@@ -206,12 +209,18 @@
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="nn" viewBox="0 0 394 94">
+    <path d="M13.7 81A76 76 0 0 1 164.9 81M227.7 81A76 76 0 0 1 378.9 81" fill="none" stroke="currentColor" stroke-width="26" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
 <header class="top" id="top">
-  <span class="wordmark"><img src="/roadie/nn.png" alt="">NicheNeeds</span>
+  <span class="wordmark"><svg aria-hidden="true"><use href="#nn"/></svg>NicheNeeds</span>
 </header>
 
 <main class="hero">
-  <h1>Roadie <img class="face" src="/roadie/roadie-white.png" alt="the raccoon">, AI that<br>gets the word out for you 📣</h1>
+  <h1>Roadie <img class="face" src="/roadie/roadie-white.png" alt="the raccoon">, AI that<br>gets the word out <br class="m">for you 📣</h1>
 
   <p class="pitch">For creatives who know they should post, and don't.</p>
 
@@ -267,7 +276,7 @@
       <a href="/privacy">Privacy Policy</a>
       <a href="/terms">Terms</a>
     </nav>
-    <span class="from">from <b><img src="/roadie/nn.png" alt="">NicheNeeds</b></span>
+    <span class="from">from <b><svg aria-hidden="true"><use href="#nn"/></svg>NicheNeeds</b></span>
   </footer>
 </section>
 
