@@ -165,10 +165,34 @@
   }
   .next { margin-top: 26px !important; font-size: 14px !important; }
 
-  .join { padding: 80px 20px 96px; text-align: center; }
-  .join img { width: 72px; height: 72px; border-radius: 50%; }
-  .join h2 { margin: 18px auto 12px; max-width: 14em; }
-  .join p { color: var(--muted); font-size: 16px; line-height: 1.5; margin: 0 auto 26px; max-width: 26em; }
+  .join {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .gap { flex: 1; }
+  .join h2 { margin: 0 0 30px; }
+  .join .cta { min-width: 260px; padding: 13px 28px; }
+  .foot {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 0 17px 28px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .foot a { color: inherit; text-decoration: none; }
+  .foot a:hover { color: var(--text); }
+  .foot .copy { text-align: left; }
+  .foot nav { display: flex; gap: 22px; }
+  .foot .from { display: flex; justify-content: flex-end; align-items: center; gap: 8px; }
+  .foot .from a { display: flex; align-items: center; gap: 6px; color: var(--text); font-weight: 600; font-size: 14px; }
+  .foot .from img { height: 9px; }
 
   @media (max-width: 720px) {
     .hero::before { flex: 0; }
@@ -176,6 +200,8 @@
     .pitch { margin-top: 40px; }
     .more-inner { grid-template-columns: 1fr; gap: 36px; }
     .phone { max-width: 300px; margin: 0 auto; width: 100%; }
+    .foot { grid-template-columns: 1fr; justify-items: center; gap: 12px; }
+    .foot .copy { text-align: center; }
   }
 </style>
 </head>
@@ -233,10 +259,18 @@
 </section>
 
 <section class="join">
-  <img src="/roadie/roadie-white.png" alt="">
-  <h2>Rather be making than editing?</h2>
-  <p>The private beta is small while we get it right. Sign up and we'll be in touch.</p>
-  <a class="cta" href="#signup">Join the private beta</a>
+  <div class="gap"></div>
+  <h2>Ready to try Roadie?</h2>
+  <a class="cta" href="#signup">Sign up for the private beta</a>
+  <div class="gap"></div>
+  <footer class="foot">
+    <span class="copy">© NicheNeeds 2026</span>
+    <nav>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms</a>
+    </nav>
+    <span class="from">from <a href="/"><img src="/roadie/nn.png" alt="">NicheNeeds</a></span>
+  </footer>
 </section>
 
 <script>
