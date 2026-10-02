@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roadie — The AI Manager for Creatives</title>
+<link rel="icon" href="/roadie/roadie-white.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #18181a;
+    --bg-raised: #222225;
+    --field: #333336;
+    --text: #ffffff;
+    --muted: #a9a9af;
+    --accent: #6470ff;
+    --accent-soft: #dccdf0;
+    --ink: #24242b;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1368px;
+    min-height: 60px;
+    margin: 0 auto;
+    padding: 12px 20px;
+  }
+  .wordmark { font-weight: 600; font-size: 15px; letter-spacing: -0.01em; display: flex; align-items: center; gap: 7px; }
+  .wordmark img { height: 10px; }
+
+  .hero {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 12px;
+    text-align: center;
+  }
+  /* spacers: the block sits a little above centre, with "Learn more" at the bottom */
+  .hero::before { content: ""; flex: 3; }
+  .spacer { flex: 4; }
+  h1 {
+    font-size: clamp(26px, 7vw, 62px);
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  h1 .face {
+    width: 1.05em;
+    height: 1.05em;
+    vertical-align: -0.2em;
+    border-radius: 50%;
+  }
+  .pitch {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 60px 0 18px;
+  }
+  .cta {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .cta:hover { background: #7480ff; }
+  form { width: 100%; max-width: 408px; }
+  input {
+    width: 100%;
+    background: var(--field);
+    border: 1px solid transparent;
+    border-radius: 18px;
+    padding: 17px 16px;
+    font: inherit;
+    font-size: 16px;
+    color: var(--text);
+    outline: none;
+  }
+  input::placeholder { color: #9b9ba1; }
+  input:focus { border-color: var(--accent); }
+  .fine { color: var(--muted); font-size: 12px; margin: 10px 0 18px; }
+  button.cta { width: 100%; padding: 13px 16px; border: 0; font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; }
+  .status { color: var(--accent-soft); font-size: 13px; margin: 12px 0 0; }
+  .status:empty { display: none; }
+  .more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    background: #2c2c2f;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    border-radius: 999px;
+    padding: 12px 16px;
+  }
+  .more-link:hover { background: #36363a; }
+
+  .more {
+    background: var(--bg-raised);
+    padding: 72px 20px;
+  }
+  .more-inner {
+    max-width: 880px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .phone {
+    background: var(--bg);
+    border: 1px solid #34343a;
+    border-radius: 28px;
+    padding: 18px 14px 20px;
+  }
+  .phone-head { text-align: center; font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+  .phone-head img { width: 40px; height: 40px; display: block; margin: 0 auto 6px; border-radius: 50%; }
+  .phone-head b { color: var(--text); font-weight: 600; font-size: 13px; display: block; }
+  .msg {
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 9px 12px;
+    border-radius: 16px;
+    margin: 8px 0;
+    max-width: 86%;
+    width: fit-content;
+  }
+  .them { background: #2f2f33; }
+  .me { background: var(--accent); margin-left: auto; }
+  h2 {
+    font-size: clamp(28px, 6vw, 40px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+  }
+  .more p { color: var(--muted); font-size: 16px; line-height: 1.55; margin: 0; }
+  ol { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; }
+  li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; font-size: 15px; line-height: 1.45; color: var(--muted); }
+  li b { color: var(--text); font-weight: 600; }
+  li span.n {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--accent-soft); color: var(--ink);
+    font-size: 13px; font-weight: 600;
+    display: grid; place-items: center;
+  }
+  .next { margin-top: 26px !important; font-size: 14px !important; }
+
+  .join { padding: 80px 20px 96px; text-align: center; }
+  .join img { width: 72px; height: 72px; border-radius: 50%; }
+  .join h2 { margin: 18px auto 12px; max-width: 14em; }
+  .join p { color: var(--muted); font-size: 16px; line-height: 1.5; margin: 0 auto 26px; max-width: 26em; }
+
+  @media (max-width: 720px) {
+    .hero::before { flex: 0; }
+    h1 { margin-top: 40px; }
+    .pitch { margin-top: 40px; }
+    .more-inner { grid-template-columns: 1fr; gap: 36px; }
+    .phone { max-width: 300px; margin: 0 auto; width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <span class="wordmark"><img src="/roadie/nn.png" alt="">NicheNeeds</span>
+</header>
+
+<main class="hero">
+  <h1>Roadie <img class="face" src="/roadie/roadie-white.png" alt="the raccoon">, AI that<br>gets the word out for you 📣</h1>
+
+  <p class="pitch">For creatives who know they should post, and don't.</p>
+
+  <form id="signup">
+    <input id="email" type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email" required>
+    <p class="fine">We'll only email you about the beta.</p>
+    <button class="cta" type="submit">Sign up for the private beta</button>
+    <p class="status" id="status" role="status"></p>
+  </form>
+
+  <div class="spacer"></div>
+  <a class="more-link" href="#more">Learn more
+    <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1.5v11M2.5 8 7 12.5 11.5 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</main>
+
+<section class="more" id="more">
+  <div class="more-inner">
+    <div class="phone">
+      <div class="phone-head">
+        <img src="/roadie/roadie-white.png" alt="">
+        <b>Roadie</b>
+        Getting your update out
+      </div>
+      <div class="msg them">Morning. What's on your mind?</div>
+      <div class="msg me">spent all day on the pause menu, finally works</div>
+      <div class="msg them">Got it. Got a photo or video to go with it?</div>
+      <div class="msg me">🎬 here's me showing it</div>
+      <div class="msg me">Post</div>
+      <div class="msg them">Subtitled it and queued it. It's on your Discord too.</div>
+    </div>
+
+    <div>
+      <h2>Every band has a manager. Now you do too.</h2>
+      <p>Artists have always had someone handling the admin, the outreach and the marketing, so they could stay with the work. Roadie is that someone for people who make things on their own. It starts with the job most of us skip: posting.</p>
+      <ol>
+        <li><span class="n">1</span><span><b>Say it.</b> Roadie messages you every morning. Tell it what you made, what you're figuring out, or what you want to ask your fans. Text, a voice note, a photo or a short video.</span></li>
+        <li><span class="n">2</span><span><b>Roadie preps it.</b> Subtitles on your video, a hook on top, and your own words underneath. Tidied, not rewritten.</span></li>
+        <li><span class="n">3</span><span><b>It's out.</b> Shared with your fans on your social channels and with your community on Discord, while you get back to making.</span></li>
+      </ol>
+      <p class="next">Coming next: Roadie tells you what your community is saying, and plans your day.</p>
+    </div>
+  </div>
+</section>
+
+<section class="join">
+  <img src="/roadie/roadie-white.png" alt="">
+  <h2>Rather be making than editing?</h2>
+  <p>The private beta is small while we get it right. Sign up and we'll be in touch.</p>
+  <a class="cta" href="#signup">Join the private beta</a>
+</section>
+
+<script>
+  // Where sign-ups are sent: a form endpoint that accepts a POST (for example Formspree). Paste the URL here.
+  const FORM_ENDPOINT = '';
+  document.getElementById('signup').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const status = document.getElementById('status');
+    if (!FORM_ENDPOINT) { status.textContent = 'Sign-ups are not connected yet.'; return; }
+    try {
+      const r = await fetch(FORM_ENDPOINT, { method: 'POST', body: new FormData(this), headers: { Accept: 'application/json' } });
+      if (!r.ok) throw new Error();
+      this.reset();
+      status.textContent = "You're on the list. We'll be in touch.";
+    } catch {
+      status.textContent = 'That did not go through. Try again in a moment.';
+    }
+  });
+</script>
+</body>
+</html>
