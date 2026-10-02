@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Roadie — The AI Manager for Creatives</title>
-<link rel="icon" href="/roadie/roadie-mark.png">
+<link rel="icon" href="/roadie/roadie-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
@@ -235,7 +235,7 @@
 </header>
 
 <main class="hero">
-  <h1>Roadie <img class="face" src="/roadie/roadie-mark.png" alt="the raccoon">, AI that<br>gets the word out <br class="m">for you 📣</h1>
+  <h1>Roadie <img class="face" src="/roadie/roadie-mark.webp" alt="the raccoon">, AI that<br>gets the word out <br class="m">for you 📣</h1>
 
   <p class="pitch">For creatives who know they should post, and don't.</p>
 
@@ -256,14 +256,14 @@
   <div class="more-inner">
     <div class="phone">
       <div class="phone-head">
-        <img src="/roadie/roadie-mark.png" alt="">
+        <img src="/roadie/roadie-mark.webp" alt="">
         <b>Roadie</b>
         Getting your update out
       </div>
       <div class="msg them">Morning. What's on your mind?</div>
-      <div class="msg me clip pair"><img class="vid" src="/roadie/roadie-before.jpg" alt="A raw clip of someone talking to camera"><img class="vid" src="/roadie/roadie-game.jpg" alt="A raw gameplay recording"></div>
+      <div class="msg me clip pair"><img class="vid" loading="lazy" src="/roadie/roadie-before.jpg" alt="A raw clip of someone talking to camera"><img class="vid" loading="lazy" src="/roadie/roadie-game.jpg" alt="A raw gameplay recording"></div>
       <div class="ask"><div class="msg them">Got it. Add more, or tap Post.</div><div class="tap">Post</div></div>
-      <div class="msg them clip"><video class="vid done" src="/roadie/roadie-after.mp4" poster="/roadie/roadie-after.jpg" autoplay muted loop playsinline aria-label="Both clips cut into one subtitled video, ready to post"></video></div>
+      <div class="msg them clip"><video class="vid done" src="/roadie/roadie-after.mp4" poster="/roadie/roadie-after.jpg" preload="none" muted loop playsinline aria-label="Both clips cut into one subtitled video, ready to post"></video></div>
       <div class="msg them">Posted.</div>
     </div>
 
@@ -319,6 +319,12 @@
     more.style.opacity = opacity;
     more.style.pointerEvents = opacity ? '' : 'none';
   }, { passive: true });
+
+  // The clip only downloads and plays once the phone mock scrolls into view.
+  const clip = document.querySelector('video.vid');
+  new IntersectionObserver(function (entries) {
+    entries[0].isIntersecting ? clip.play().catch(function () {}) : clip.pause();
+  }, { threshold: 0.25 }).observe(clip);
 
   // Where sign-ups are sent: a form endpoint that accepts a POST (for example Formspree). Paste the URL here.
   const FORM_ENDPOINT = '';
