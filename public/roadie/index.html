@@ -288,6 +288,14 @@
     });
   });
 
+  // "Learn more" fades away as you scroll past the hero.
+  const more = document.querySelector('.more-link');
+  addEventListener('scroll', function () {
+    const opacity = Math.max(0, 1 - scrollY / 160);
+    more.style.opacity = opacity;
+    more.style.pointerEvents = opacity ? '' : 'none';
+  }, { passive: true });
+
   // Where sign-ups are sent: a form endpoint that accepts a POST (for example Formspree). Paste the URL here.
   const FORM_ENDPOINT = '';
   document.getElementById('signup').addEventListener('submit', async function (e) {
