@@ -109,6 +109,11 @@
   button.cta { width: 100%; padding: 13px 16px; border: 0; font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; }
   .status { color: var(--accent-soft); font-size: 13px; margin: 12px 0 0; }
   .status:empty { display: none; }
+  /* After a sign-up the form gives way to a plain confirmation. */
+  #signup.done input, #signup.done .fine, #signup.done button { display: none; }
+  #signup.done .status { margin: 0; color: #fff; font-size: 17px; line-height: 1.45; }
+  #signup.done .status::before { content: "\2713"; display: block; width: 36px; height: 36px; margin: 0 auto 10px; border-radius: 50%; background: var(--accent); font-size: 20px; line-height: 36px; text-align: center; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
   .more-link {
     display: inline-flex;
     align-items: center;
@@ -252,6 +257,7 @@
 
   <form id="signup">
     <input id="email" type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email" required>
+    <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
     <p class="fine">Invite-only for now. We'll email you when a spot opens.</p>
     <button class="cta" type="submit">Get early access</button>
     <p class="status" id="status" role="status"></p>
@@ -338,18 +344,26 @@
   }, { threshold: 0.25 }).observe(clip);
 
   // Where sign-ups are sent: a form endpoint that accepts a POST (for example Formspree). Paste the URL here.
-  const FORM_ENDPOINT = '';
+  const FORM_ENDPOINT = '/api/roadie-signup';
   document.getElementById('signup').addEventListener('submit', async function (e) {
     e.preventDefault();
     const status = document.getElementById('status');
-    if (!FORM_ENDPOINT) { status.textContent = 'Sign-ups are not connected yet.'; return; }
+    const button = this.querySelector('button');
+    const email = this.email.value.trim();
+    button.disabled = true;
+    status.textContent = '';
     try {
-      const r = await fetch(FORM_ENDPOINT, { method: 'POST', body: new FormData(this), headers: { Accept: 'application/json' } });
+      const r = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ email: email, website: this.website.value }),
+      });
       if (!r.ok) throw new Error();
-      this.reset();
-      status.textContent = "You're on the list. We'll be in touch.";
+      this.classList.add('done');
+      status.textContent = "You're on the list. We'll email " + email + " when a spot opens.";
     } catch {
-      status.textContent = 'That did not go through. Try again in a moment.';
+      button.disabled = false;
+      status.textContent = 'That did not go through. Check the address and try again.';
     }
   });
 </script>
